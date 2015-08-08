@@ -8,9 +8,9 @@
 
 #import "ShareViewController.h"
 #import "SharePresenterImpl.h"
+#import "ShareViewInterface.h"
 
-
-@interface ShareViewController (){
+@interface ShareViewController () <ShareViewInterface>{
     __weak IBOutlet UICollectionView *_collectionView;
     SharePresenterImpl *_presenter;
     NSArray *_viewModel;
@@ -22,7 +22,8 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    _presenter = [SharePresenterImpl new];
+    _presenter = [[SharePresenterImpl alloc] initWithView:self];
+    [_presenter setup];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -51,6 +52,13 @@
     } completion:^(BOOL finished) {
         [self.extensionContext completeRequestReturningItems:nil completionHandler:nil];
     }];
+}
+
+#pragma mark - view interface methods
+
+- (void)setViewModel:(NSArray *)vieWModel{
+    _viewModel = vieWModel;
+    [_collectionView reloadData];
 }
 
 

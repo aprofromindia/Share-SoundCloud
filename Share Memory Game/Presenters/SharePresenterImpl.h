@@ -8,7 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "SharePresenter.h"
+#import "ShareViewInterface.h"
 
 @interface SharePresenterImpl : NSObject <SharePresenter>
+
+- (nonnull instancetype)initWithView:(nonnull id<ShareViewInterface>) view NS_DESIGNATED_INITIALIZER;
+
+- (nullable instancetype)init NS_UNAVAILABLE;
+
+- (void) setup;
 
 @end

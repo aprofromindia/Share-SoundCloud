@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TrackRepository.h"
+@class TrackList;
 
-@interface TrackRepositoryImpl : NSObject <TrackRepository>
+@protocol TrackListRepository <NSObject>
+
+- (void) fetchTrackListWithHandler:(void(^)(TrackList *)) handler;
 
 @end

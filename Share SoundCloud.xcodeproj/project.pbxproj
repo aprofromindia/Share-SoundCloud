@@ -30,9 +30,10 @@
 		A26A11A61B7607320089C7C0 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11A51B7607320089C7C0 /* Track.m */; };
 		A26A11AA1B76074D0089C7C0 /* TrackList.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11A91B76074D0089C7C0 /* TrackList.m */; };
 		A26A11B21B7607B60089C7C0 /* SharePresenterImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11B11B7607B60089C7C0 /* SharePresenterImpl.m */; };
-		A26A11B71B760B400089C7C0 /* TrackRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11B61B760B400089C7C0 /* TrackRepositoryImpl.m */; };
-		A26A11BE1B760D1E0089C7C0 /* RESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11BD1B760D1E0089C7C0 /* RESTClient.m */; };
-		A26A11C31B760D3A0089C7C0 /* TrackListInteractorImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11C21B760D3A0089C7C0 /* TrackListInteractorImpl.m */; };
+		A26A11B71B760B400089C7C0 /* TrackListRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11B61B760B400089C7C0 /* TrackListRepositoryImpl.m */; };
+		A26A11BE1B760D1E0089C7C0 /* RESTClientImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11BD1B760D1E0089C7C0 /* RESTClientImpl.m */; };
+		A26A11C31B760D3A0089C7C0 /* TrackListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11C21B760D3A0089C7C0 /* TrackListInteractor.m */; };
+		A26A11C61B7624AF0089C7C0 /* GamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */; };
 		A2CD4C681B72119C00320DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C671B72119C00320DB8 /* main.m */; };
 		A2CD4C6B1B72119C00320DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6A1B72119C00320DB8 /* AppDelegate.m */; };
 		A2CD4C6E1B72119C00320DB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6D1B72119C00320DB8 /* ViewController.m */; };
@@ -93,15 +94,16 @@
 		A26A11A91B76074D0089C7C0 /* TrackList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackList.m; path = Entities/TrackList.m; sourceTree = "<group>"; };
 		A26A11B01B7607B60089C7C0 /* SharePresenterImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharePresenterImpl.h; path = Presenters/SharePresenterImpl.h; sourceTree = "<group>"; };
 		A26A11B11B7607B60089C7C0 /* SharePresenterImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharePresenterImpl.m; path = Presenters/SharePresenterImpl.m; sourceTree = "<group>"; };
-		A26A11B51B760B400089C7C0 /* TrackRepositoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackRepositoryImpl.h; path = Repositories/TrackRepositoryImpl.h; sourceTree = "<group>"; };
-		A26A11B61B760B400089C7C0 /* TrackRepositoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackRepositoryImpl.m; path = Repositories/TrackRepositoryImpl.m; sourceTree = "<group>"; };
-		A26A11B81B760BA40089C7C0 /* TrackRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackRepository.h; path = Repositories/TrackRepository.h; sourceTree = "<group>"; };
+		A26A11B51B760B400089C7C0 /* TrackListRepositoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackListRepositoryImpl.h; path = Repositories/TrackListRepositoryImpl.h; sourceTree = "<group>"; };
+		A26A11B61B760B400089C7C0 /* TrackListRepositoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackListRepositoryImpl.m; path = Repositories/TrackListRepositoryImpl.m; sourceTree = "<group>"; };
+		A26A11B81B760BA40089C7C0 /* TrackListRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackListRepository.h; path = Repositories/TrackListRepository.h; sourceTree = "<group>"; };
 		A26A11B91B760BE10089C7C0 /* SharePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharePresenter.h; path = Presenters/SharePresenter.h; sourceTree = "<group>"; };
-		A26A11BC1B760D1E0089C7C0 /* RESTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTClient.h; sourceTree = "<group>"; };
-		A26A11BD1B760D1E0089C7C0 /* RESTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTClient.m; sourceTree = "<group>"; };
-		A26A11C01B760D3A0089C7C0 /* TrackListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackListInteractor.h; sourceTree = "<group>"; };
-		A26A11C11B760D3A0089C7C0 /* TrackListInteractorImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackListInteractorImpl.h; sourceTree = "<group>"; };
-		A26A11C21B760D3A0089C7C0 /* TrackListInteractorImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackListInteractorImpl.m; sourceTree = "<group>"; };
+		A26A11BC1B760D1E0089C7C0 /* RESTClientImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTClientImpl.h; sourceTree = "<group>"; };
+		A26A11BD1B760D1E0089C7C0 /* RESTClientImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTClientImpl.m; sourceTree = "<group>"; };
+		A26A11C11B760D3A0089C7C0 /* TrackListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackListInteractor.h; sourceTree = "<group>"; };
+		A26A11C21B760D3A0089C7C0 /* TrackListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackListInteractor.m; sourceTree = "<group>"; };
+		A26A11C41B76236B0089C7C0 /* ShareViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewInterface.h; path = Views/ShareViewInterface.h; sourceTree = "<group>"; };
+		A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GamCollectionViewCell.xib; path = Views/GamCollectionViewCell.xib; sourceTree = "<group>"; };
 		A2CD4C621B72119C00320DB8 /* Share SoundCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share SoundCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CD4C661B72119C00320DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2CD4C671B72119C00320DB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		A2CD4C7B1B72119C00320DB8 /* Share SoundCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Share SoundCloudTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CD4C801B72119C00320DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2CD4C811B72119C00320DB8 /* Share_SoundCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Share_SoundCloudTests.m; sourceTree = "<group>"; };
+		A2FC52FE1B76C0260060B350 /* RESTClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTClient.h; sourceTree = "<group>"; };
 		AC374DE1E011443C98070F05 /* libPods-Share SoundCloudTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Share SoundCloudTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB61891B6B25D8387087B5D6 /* Pods-Share SoundCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share SoundCloud.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share SoundCloud/Pods-Share SoundCloud.release.xcconfig"; sourceTree = "<group>"; };
 		E33F2C10B02845C32E569761 /* Pods-Share Memory Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share Memory Game.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Share Memory Game/Pods-Share Memory Game.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,10 +209,12 @@
 		A26A11861B72BB490089C7C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A26A11C41B76236B0089C7C0 /* ShareViewInterface.h */,
 				A26A117A1B72B5F60089C7C0 /* ShareViewController.h */,
 				A26A117B1B72B5F60089C7C0 /* ShareViewController.m */,
 				A26A11881B72C3020089C7C0 /* GameCollectionViewCell.h */,
 				A26A11891B72C3020089C7C0 /* GameCollectionViewCell.m */,
+				A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -229,9 +234,9 @@
 			isa = PBXGroup;
 			children = (
 				A26A11BB1B760D1D0089C7C0 /* Networking */,
-				A26A11B81B760BA40089C7C0 /* TrackRepository.h */,
-				A26A11B51B760B400089C7C0 /* TrackRepositoryImpl.h */,
-				A26A11B61B760B400089C7C0 /* TrackRepositoryImpl.m */,
+				A26A11B81B760BA40089C7C0 /* TrackListRepository.h */,
+				A26A11B51B760B400089C7C0 /* TrackListRepositoryImpl.h */,
+				A26A11B61B760B400089C7C0 /* TrackListRepositoryImpl.m */,
 			);
 			name = Repository;
 			sourceTree = "<group>";
@@ -249,8 +254,9 @@
 		A26A11BB1B760D1D0089C7C0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				A26A11BC1B760D1E0089C7C0 /* RESTClient.h */,
-				A26A11BD1B760D1E0089C7C0 /* RESTClient.m */,
+				A2FC52FE1B76C0260060B350 /* RESTClient.h */,
+				A26A11BC1B760D1E0089C7C0 /* RESTClientImpl.h */,
+				A26A11BD1B760D1E0089C7C0 /* RESTClientImpl.m */,
 			);
 			name = Networking;
 			path = Repositories/Networking;
@@ -259,9 +265,8 @@
 		A26A11BF1B760D3A0089C7C0 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				A26A11C01B760D3A0089C7C0 /* TrackListInteractor.h */,
-				A26A11C11B760D3A0089C7C0 /* TrackListInteractorImpl.h */,
-				A26A11C21B760D3A0089C7C0 /* TrackListInteractorImpl.m */,
+				A26A11C11B760D3A0089C7C0 /* TrackListInteractor.h */,
+				A26A11C21B760D3A0089C7C0 /* TrackListInteractor.m */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -402,7 +407,14 @@
 				TargetAttributes = {
 					A26A11751B72B5F60089C7C0 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 62YJWQ3CR7;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.OMC = {
+								enabled = 0;
+							};
+						};
 					};
 					A2CD4C611B72119C00320DB8 = {
 						CreatedOnToolsVersion = 6.4;
@@ -448,6 +460,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A26A11C61B7624AF0089C7C0 /* GamCollectionViewCell.xib in Resources */,
 				A26A117E1B72B5F60089C7C0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,11 +595,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A26A11B71B760B400089C7C0 /* TrackRepositoryImpl.m in Sources */,
+				A26A11B71B760B400089C7C0 /* TrackListRepositoryImpl.m in Sources */,
 				A26A118A1B72C3020089C7C0 /* GameCollectionViewCell.m in Sources */,
-				A26A11C31B760D3A0089C7C0 /* TrackListInteractorImpl.m in Sources */,
+				A26A11C31B760D3A0089C7C0 /* TrackListInteractor.m in Sources */,
 				A26A117C1B72B5F60089C7C0 /* ShareViewController.m in Sources */,
-				A26A11BE1B760D1E0089C7C0 /* RESTClient.m in Sources */,
+				A26A11BE1B760D1E0089C7C0 /* RESTClientImpl.m in Sources */,
 				A26A11AA1B76074D0089C7C0 /* TrackList.m in Sources */,
 				A26A11A61B7607320089C7C0 /* Track.m in Sources */,
 				A26A11B21B7607B60089C7C0 /* SharePresenterImpl.m in Sources */,
@@ -650,6 +663,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E33F2C10B02845C32E569761 /* Pods-Share Memory Game.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -659,6 +673,7 @@
 				INFOPLIST_FILE = "Share Memory Game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -667,11 +682,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 02A0B4EFFC6177978FEA3DA0 /* Pods-Share Memory Game.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Share Memory Game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -761,7 +778,7 @@
 			baseConfigurationReference = 046DC5BFB52ABD682AB2CCBB /* Pods-Share SoundCloud.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Share SoundCloud/Share SoundCloud.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Share SoundCloud/Info.plist";
@@ -776,7 +793,7 @@
 			baseConfigurationReference = CB61891B6B25D8387087B5D6 /* Pods-Share SoundCloud.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Share SoundCloud/Share SoundCloud.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Share SoundCloud/Info.plist";
@@ -802,6 +819,7 @@
 				INFOPLIST_FILE = "Share SoundCloudTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Share SoundCloud.app/Share SoundCloud";
 			};
 			name = Debug;
@@ -818,6 +836,7 @@
 				INFOPLIST_FILE = "Share SoundCloudTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Share SoundCloud.app/Share SoundCloud";
 			};
 			name = Release;
