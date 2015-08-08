@@ -6,7 +6,33 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A2CD4C9F1B72337500320DB8 /* OCLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A2CD4CA21B72337500320DB8 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildPhases = (
+				A2CD4CA41B723C2600320DB8 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = OCLint;
+			productName = OCLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		1DF636E6F0DEE8BE628C8BA1 /* libPods-Share SoundCloudTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC374DE1E011443C98070F05 /* libPods-Share SoundCloudTests.a */; };
+		2256967A773EF4A13F46395C /* libPods-Share SoundCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6544A0472F34553F78686A78 /* libPods-Share SoundCloud.a */; };
+		A26A117C1B72B5F60089C7C0 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A117B1B72B5F60089C7C0 /* ShareViewController.m */; };
+		A26A117E1B72B5F60089C7C0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A26A117D1B72B5F60089C7C0 /* MainInterface.storyboard */; };
+		A26A11811B72B5F60089C7C0 /* Share Memory Game.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A26A11761B72B5F60089C7C0 /* Share Memory Game.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A26A118A1B72C3020089C7C0 /* GameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11891B72C3020089C7C0 /* GameCollectionViewCell.m */; };
+		A26A11A61B7607320089C7C0 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11A51B7607320089C7C0 /* Track.m */; };
+		A26A11AA1B76074D0089C7C0 /* TrackList.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11A91B76074D0089C7C0 /* TrackList.m */; };
+		A26A11B21B7607B60089C7C0 /* SharePresenterImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11B11B7607B60089C7C0 /* SharePresenterImpl.m */; };
+		A26A11B71B760B400089C7C0 /* TrackRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11B61B760B400089C7C0 /* TrackRepositoryImpl.m */; };
+		A26A11BE1B760D1E0089C7C0 /* RESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11BD1B760D1E0089C7C0 /* RESTClient.m */; };
+		A26A11C31B760D3A0089C7C0 /* TrackListInteractorImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11C21B760D3A0089C7C0 /* TrackListInteractorImpl.m */; };
 		A2CD4C681B72119C00320DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C671B72119C00320DB8 /* main.m */; };
 		A2CD4C6B1B72119C00320DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6A1B72119C00320DB8 /* AppDelegate.m */; };
 		A2CD4C6E1B72119C00320DB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6D1B72119C00320DB8 /* ViewController.m */; };
@@ -14,9 +40,17 @@
 		A2CD4C731B72119C00320DB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CD4C721B72119C00320DB8 /* Images.xcassets */; };
 		A2CD4C761B72119C00320DB8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2CD4C741B72119C00320DB8 /* LaunchScreen.xib */; };
 		A2CD4C821B72119C00320DB8 /* Share_SoundCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C811B72119C00320DB8 /* Share_SoundCloudTests.m */; };
+		CDB2DFC4F28958A04651BC73 /* libPods-Share Memory Game.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE280C28F7930746A1D04A64 /* libPods-Share Memory Game.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A26A117F1B72B5F60089C7C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2CD4C5A1B72119C00320DB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A26A11751B72B5F60089C7C0;
+			remoteInfo = "Share Memory Game";
+		};
 		A2CD4C7C1B72119C00320DB8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A2CD4C5A1B72119C00320DB8 /* Project object */;
@@ -26,7 +60,48 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A2CD4C9E1B7211B500320DB8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A26A11811B72B5F60089C7C0 /* Share Memory Game.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		02A0B4EFFC6177978FEA3DA0 /* Pods-Share Memory Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share Memory Game.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share Memory Game/Pods-Share Memory Game.release.xcconfig"; sourceTree = "<group>"; };
+		046DC5BFB52ABD682AB2CCBB /* Pods-Share SoundCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share SoundCloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Share SoundCloud/Pods-Share SoundCloud.debug.xcconfig"; sourceTree = "<group>"; };
+		16EB93758B5CF622FB1367B4 /* Pods-Share SoundCloudTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share SoundCloudTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Share SoundCloudTests/Pods-Share SoundCloudTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6544A0472F34553F78686A78 /* libPods-Share SoundCloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Share SoundCloud.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72CEEBF24CBE56C397620C36 /* Pods-Share SoundCloudTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share SoundCloudTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share SoundCloudTests/Pods-Share SoundCloudTests.release.xcconfig"; sourceTree = "<group>"; };
+		A26A11761B72B5F60089C7C0 /* Share Memory Game.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Share Memory Game.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A26A11791B72B5F60089C7C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A26A117A1B72B5F60089C7C0 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		A26A117B1B72B5F60089C7C0 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		A26A117D1B72B5F60089C7C0 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		A26A11881B72C3020089C7C0 /* GameCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCollectionViewCell.h; path = Views/GameCollectionViewCell.h; sourceTree = "<group>"; };
+		A26A11891B72C3020089C7C0 /* GameCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCollectionViewCell.m; path = Views/GameCollectionViewCell.m; sourceTree = "<group>"; };
+		A26A11A41B7607320089C7C0 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Track.h; path = Entities/Track.h; sourceTree = "<group>"; };
+		A26A11A51B7607320089C7C0 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Track.m; path = Entities/Track.m; sourceTree = "<group>"; };
+		A26A11A81B76074D0089C7C0 /* TrackList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackList.h; path = Entities/TrackList.h; sourceTree = "<group>"; };
+		A26A11A91B76074D0089C7C0 /* TrackList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackList.m; path = Entities/TrackList.m; sourceTree = "<group>"; };
+		A26A11B01B7607B60089C7C0 /* SharePresenterImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharePresenterImpl.h; path = Presenters/SharePresenterImpl.h; sourceTree = "<group>"; };
+		A26A11B11B7607B60089C7C0 /* SharePresenterImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharePresenterImpl.m; path = Presenters/SharePresenterImpl.m; sourceTree = "<group>"; };
+		A26A11B51B760B400089C7C0 /* TrackRepositoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackRepositoryImpl.h; path = Repositories/TrackRepositoryImpl.h; sourceTree = "<group>"; };
+		A26A11B61B760B400089C7C0 /* TrackRepositoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackRepositoryImpl.m; path = Repositories/TrackRepositoryImpl.m; sourceTree = "<group>"; };
+		A26A11B81B760BA40089C7C0 /* TrackRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackRepository.h; path = Repositories/TrackRepository.h; sourceTree = "<group>"; };
+		A26A11B91B760BE10089C7C0 /* SharePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharePresenter.h; path = Presenters/SharePresenter.h; sourceTree = "<group>"; };
+		A26A11BC1B760D1E0089C7C0 /* RESTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTClient.h; sourceTree = "<group>"; };
+		A26A11BD1B760D1E0089C7C0 /* RESTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTClient.m; sourceTree = "<group>"; };
+		A26A11C01B760D3A0089C7C0 /* TrackListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackListInteractor.h; sourceTree = "<group>"; };
+		A26A11C11B760D3A0089C7C0 /* TrackListInteractorImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackListInteractorImpl.h; sourceTree = "<group>"; };
+		A26A11C21B760D3A0089C7C0 /* TrackListInteractorImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackListInteractorImpl.m; sourceTree = "<group>"; };
 		A2CD4C621B72119C00320DB8 /* Share SoundCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share SoundCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CD4C661B72119C00320DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2CD4C671B72119C00320DB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,13 +115,26 @@
 		A2CD4C7B1B72119C00320DB8 /* Share SoundCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Share SoundCloudTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CD4C801B72119C00320DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2CD4C811B72119C00320DB8 /* Share_SoundCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Share_SoundCloudTests.m; sourceTree = "<group>"; };
+		AC374DE1E011443C98070F05 /* libPods-Share SoundCloudTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Share SoundCloudTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB61891B6B25D8387087B5D6 /* Pods-Share SoundCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share SoundCloud.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share SoundCloud/Pods-Share SoundCloud.release.xcconfig"; sourceTree = "<group>"; };
+		E33F2C10B02845C32E569761 /* Pods-Share Memory Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share Memory Game.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Share Memory Game/Pods-Share Memory Game.debug.xcconfig"; sourceTree = "<group>"; };
+		FE280C28F7930746A1D04A64 /* libPods-Share Memory Game.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Share Memory Game.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A26A11731B72B5F60089C7C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB2DFC4F28958A04651BC73 /* libPods-Share Memory Game.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2CD4C5F1B72119C00320DB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2256967A773EF4A13F46395C /* libPods-Share SoundCloud.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +142,139 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF636E6F0DEE8BE628C8BA1 /* libPods-Share SoundCloudTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EC55A8D504EBB23E84A101D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC374DE1E011443C98070F05 /* libPods-Share SoundCloudTests.a */,
+				6544A0472F34553F78686A78 /* libPods-Share SoundCloud.a */,
+				FE280C28F7930746A1D04A64 /* libPods-Share Memory Game.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A082627480F3C0B4BA24A6F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16EB93758B5CF622FB1367B4 /* Pods-Share SoundCloudTests.debug.xcconfig */,
+				72CEEBF24CBE56C397620C36 /* Pods-Share SoundCloudTests.release.xcconfig */,
+				046DC5BFB52ABD682AB2CCBB /* Pods-Share SoundCloud.debug.xcconfig */,
+				CB61891B6B25D8387087B5D6 /* Pods-Share SoundCloud.release.xcconfig */,
+				E33F2C10B02845C32E569761 /* Pods-Share Memory Game.debug.xcconfig */,
+				02A0B4EFFC6177978FEA3DA0 /* Pods-Share Memory Game.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A26A11771B72B5F60089C7C0 /* Share Memory Game */ = {
+			isa = PBXGroup;
+			children = (
+				A26A11861B72BB490089C7C0 /* Views */,
+				A26A11B31B7607BB0089C7C0 /* Presenters */,
+				A26A11BF1B760D3A0089C7C0 /* Interactors */,
+				A26A11A71B7607370089C7C0 /* Entities */,
+				A26A11AF1B76077E0089C7C0 /* Repository */,
+				A26A117D1B72B5F60089C7C0 /* MainInterface.storyboard */,
+				A26A11781B72B5F60089C7C0 /* Supporting Files */,
+			);
+			path = "Share Memory Game";
+			sourceTree = "<group>";
+		};
+		A26A11781B72B5F60089C7C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A26A11791B72B5F60089C7C0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A26A11851B72BB400089C7C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2CD4C6C1B72119C00320DB8 /* ViewController.h */,
+				A2CD4C6D1B72119C00320DB8 /* ViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A26A11861B72BB490089C7C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A26A117A1B72B5F60089C7C0 /* ShareViewController.h */,
+				A26A117B1B72B5F60089C7C0 /* ShareViewController.m */,
+				A26A11881B72C3020089C7C0 /* GameCollectionViewCell.h */,
+				A26A11891B72C3020089C7C0 /* GameCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A26A11A71B7607370089C7C0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A26A11A41B7607320089C7C0 /* Track.h */,
+				A26A11A51B7607320089C7C0 /* Track.m */,
+				A26A11A81B76074D0089C7C0 /* TrackList.h */,
+				A26A11A91B76074D0089C7C0 /* TrackList.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		A26A11AF1B76077E0089C7C0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A26A11BB1B760D1D0089C7C0 /* Networking */,
+				A26A11B81B760BA40089C7C0 /* TrackRepository.h */,
+				A26A11B51B760B400089C7C0 /* TrackRepositoryImpl.h */,
+				A26A11B61B760B400089C7C0 /* TrackRepositoryImpl.m */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		A26A11B31B7607BB0089C7C0 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				A26A11B91B760BE10089C7C0 /* SharePresenter.h */,
+				A26A11B01B7607B60089C7C0 /* SharePresenterImpl.h */,
+				A26A11B11B7607B60089C7C0 /* SharePresenterImpl.m */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
+		A26A11BB1B760D1D0089C7C0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A26A11BC1B760D1E0089C7C0 /* RESTClient.h */,
+				A26A11BD1B760D1E0089C7C0 /* RESTClient.m */,
+			);
+			name = Networking;
+			path = Repositories/Networking;
+			sourceTree = "<group>";
+		};
+		A26A11BF1B760D3A0089C7C0 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				A26A11C01B760D3A0089C7C0 /* TrackListInteractor.h */,
+				A26A11C11B760D3A0089C7C0 /* TrackListInteractorImpl.h */,
+				A26A11C21B760D3A0089C7C0 /* TrackListInteractorImpl.m */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
 		A2CD4C591B72119C00320DB8 = {
 			isa = PBXGroup;
 			children = (
 				A2CD4C641B72119C00320DB8 /* Share SoundCloud */,
 				A2CD4C7E1B72119C00320DB8 /* Share SoundCloudTests */,
+				A26A11771B72B5F60089C7C0 /* Share Memory Game */,
 				A2CD4C631B72119C00320DB8 /* Products */,
+				A082627480F3C0B4BA24A6F4 /* Pods */,
+				2EC55A8D504EBB23E84A101D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +283,7 @@
 			children = (
 				A2CD4C621B72119C00320DB8 /* Share SoundCloud.app */,
 				A2CD4C7B1B72119C00320DB8 /* Share SoundCloudTests.xctest */,
+				A26A11761B72B5F60089C7C0 /* Share Memory Game.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,8 +293,7 @@
 			children = (
 				A2CD4C691B72119C00320DB8 /* AppDelegate.h */,
 				A2CD4C6A1B72119C00320DB8 /* AppDelegate.m */,
-				A2CD4C6C1B72119C00320DB8 /* ViewController.h */,
-				A2CD4C6D1B72119C00320DB8 /* ViewController.m */,
+				A26A11851B72BB400089C7C0 /* Views */,
 				A2CD4C6F1B72119C00320DB8 /* Main.storyboard */,
 				A2CD4C721B72119C00320DB8 /* Images.xcassets */,
 				A2CD4C741B72119C00320DB8 /* LaunchScreen.xib */,
@@ -122,17 +331,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A2CD4C611B72119C00320DB8 /* Share SoundCloud */ = {
+		A26A11751B72B5F60089C7C0 /* Share Memory Game */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A2CD4C851B72119C00320DB8 /* Build configuration list for PBXNativeTarget "Share SoundCloud" */;
+			buildConfigurationList = A26A11821B72B5F60089C7C0 /* Build configuration list for PBXNativeTarget "Share Memory Game" */;
 			buildPhases = (
-				A2CD4C5E1B72119C00320DB8 /* Sources */,
-				A2CD4C5F1B72119C00320DB8 /* Frameworks */,
-				A2CD4C601B72119C00320DB8 /* Resources */,
+				C89E7A21E55ACA40213890D1 /* Check Pods Manifest.lock */,
+				A26A11721B72B5F60089C7C0 /* Sources */,
+				A26A11731B72B5F60089C7C0 /* Frameworks */,
+				A26A11741B72B5F60089C7C0 /* Resources */,
+				3191392A8C17ED5D80568E99 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = "Share Memory Game";
+			productName = "Share Memory Game";
+			productReference = A26A11761B72B5F60089C7C0 /* Share Memory Game.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A2CD4C611B72119C00320DB8 /* Share SoundCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2CD4C851B72119C00320DB8 /* Build configuration list for PBXNativeTarget "Share SoundCloud" */;
+			buildPhases = (
+				2F8FC2D2E36655780DFC125E /* Check Pods Manifest.lock */,
+				A2CD4C5E1B72119C00320DB8 /* Sources */,
+				A2CD4C5F1B72119C00320DB8 /* Frameworks */,
+				A2CD4C601B72119C00320DB8 /* Resources */,
+				A2CD4C9E1B7211B500320DB8 /* Embed App Extensions */,
+				038A7023C641B3228BE837E6 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A26A11801B72B5F60089C7C0 /* PBXTargetDependency */,
 			);
 			name = "Share SoundCloud";
 			productName = "Share SoundCloud";
@@ -143,9 +375,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2CD4C881B72119C00320DB8 /* Build configuration list for PBXNativeTarget "Share SoundCloudTests" */;
 			buildPhases = (
+				D390FB6CAFB3B59208845E6D /* Check Pods Manifest.lock */,
 				A2CD4C771B72119C00320DB8 /* Sources */,
 				A2CD4C781B72119C00320DB8 /* Frameworks */,
 				A2CD4C791B72119C00320DB8 /* Resources */,
+				C089E9D4BA14140196D92A68 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -166,12 +400,25 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Apro;
 				TargetAttributes = {
+					A26A11751B72B5F60089C7C0 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 62YJWQ3CR7;
+					};
 					A2CD4C611B72119C00320DB8 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 62YJWQ3CR7;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					A2CD4C7A1B72119C00320DB8 = {
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = A2CD4C611B72119C00320DB8;
+					};
+					A2CD4C9F1B72337500320DB8 = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -190,11 +437,21 @@
 			targets = (
 				A2CD4C611B72119C00320DB8 /* Share SoundCloud */,
 				A2CD4C7A1B72119C00320DB8 /* Share SoundCloudTests */,
+				A26A11751B72B5F60089C7C0 /* Share Memory Game */,
+				A2CD4C9F1B72337500320DB8 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A26A11741B72B5F60089C7C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A26A117E1B72B5F60089C7C0 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2CD4C601B72119C00320DB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,7 +471,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		038A7023C641B3228BE837E6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Share SoundCloud/Pods-Share SoundCloud-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F8FC2D2E36655780DFC125E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3191392A8C17ED5D80568E99 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Share Memory Game/Pods-Share Memory Game-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2CD4CA41B723C2600320DB8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f ~/.bash_profile ]; then\nsource ~/.bash_profile\nfi\n\nhash oclint &> /dev/null\nif [ $? -eq 1 ]; then\necho >&2 \"oclint not found, analyzing stopped\"\nexit 1\nfi\n\nif [ ! -f \"${TARGET_TEMP_DIR}\"/xcodebuild.log ]; then\necho \"[*] xcodebuild.log not found, possibly clean was performed\"\necho \"[*] starting xcodebuild to rebuild the project..\"\n\ncd \"${SRCROOT}\"\n\nxcodebuild clean -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj\n\n#build xcodebuild.log\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj | tee \"${TARGET_TEMP_DIR}\"/xcodebuild.log\nfi\n\ncd \"${TARGET_TEMP_DIR}\"\n\necho \"[*] transforming xcodebuild.log into compile_commands.json...\"\n#transform it into compile_commands.json\noclint-xcodebuild\n\necho \"[*] starting analyzing\"\noclint-json-compilation-database -- -p \"${TARGET_TEMP_DIR}\" | sed -E 's/(.*\\.(c|m{1,2}):[0-9]*:[0-9]*:)/\\1 warning:/'";
+		};
+		C089E9D4BA14140196D92A68 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Share SoundCloudTests/Pods-Share SoundCloudTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C89E7A21E55ACA40213890D1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D390FB6CAFB3B59208845E6D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		A26A11721B72B5F60089C7C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A26A11B71B760B400089C7C0 /* TrackRepositoryImpl.m in Sources */,
+				A26A118A1B72C3020089C7C0 /* GameCollectionViewCell.m in Sources */,
+				A26A11C31B760D3A0089C7C0 /* TrackListInteractorImpl.m in Sources */,
+				A26A117C1B72B5F60089C7C0 /* ShareViewController.m in Sources */,
+				A26A11BE1B760D1E0089C7C0 /* RESTClient.m in Sources */,
+				A26A11AA1B76074D0089C7C0 /* TrackList.m in Sources */,
+				A26A11A61B7607320089C7C0 /* Track.m in Sources */,
+				A26A11B21B7607B60089C7C0 /* SharePresenterImpl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2CD4C5E1B72119C00320DB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +614,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A26A11801B72B5F60089C7C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A26A11751B72B5F60089C7C0 /* Share Memory Game */;
+			targetProxy = A26A117F1B72B5F60089C7C0 /* PBXContainerItemProxy */;
+		};
 		A2CD4C7D1B72119C00320DB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A2CD4C611B72119C00320DB8 /* Share SoundCloud */;
@@ -263,6 +646,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A26A11831B72B5F60089C7C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E33F2C10B02845C32E569761 /* Pods-Share Memory Game.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Share Memory Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A26A11841B72B5F60089C7C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02A0B4EFFC6177978FEA3DA0 /* Pods-Share Memory Game.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Share Memory Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		A2CD4C831B72119C00320DB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -345,26 +758,37 @@
 		};
 		A2CD4C861B72119C00320DB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 046DC5BFB52ABD682AB2CCBB /* Pods-Share SoundCloud.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Share SoundCloud/Share SoundCloud.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Share SoundCloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		A2CD4C871B72119C00320DB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB61891B6B25D8387087B5D6 /* Pods-Share SoundCloud.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Share SoundCloud/Share SoundCloud.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Share SoundCloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 		A2CD4C891B72119C00320DB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16EB93758B5CF622FB1367B4 /* Pods-Share SoundCloudTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -384,6 +808,7 @@
 		};
 		A2CD4C8A1B72119C00320DB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72CEEBF24CBE56C397620C36 /* Pods-Share SoundCloudTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -397,9 +822,32 @@
 			};
 			name = Release;
 		};
+		A2CD4CA01B72337500320DB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2CD4CA11B72337500320DB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A26A11821B72B5F60089C7C0 /* Build configuration list for PBXNativeTarget "Share Memory Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A26A11831B72B5F60089C7C0 /* Debug */,
+				A26A11841B72B5F60089C7C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A2CD4C5D1B72119C00320DB8 /* Build configuration list for PBXProject "Share SoundCloud" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -416,6 +864,7 @@
 				A2CD4C871B72119C00320DB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2CD4C881B72119C00320DB8 /* Build configuration list for PBXNativeTarget "Share SoundCloudTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +873,16 @@
 				A2CD4C8A1B72119C00320DB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2CD4CA21B72337500320DB8 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2CD4CA01B72337500320DB8 /* Debug */,
+				A2CD4CA11B72337500320DB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
