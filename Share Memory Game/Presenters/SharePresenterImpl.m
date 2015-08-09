@@ -12,8 +12,12 @@
 #import "TrackListRepositoryImpl.h"
 #import "RESTClientImpl.h"
 @import MobileCoreServices;
+#import "ShareViewModel.h"
+#import "TrackListResponseModel.h"
 
-static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-back-to-back-freestyle";
+static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-back-to-back-freestyle"; // TODO - to be removed.
+
+static const int kViewModelMaxArraySize = 8;
 
 @implementation SharePresenterImpl{
     id<ShareViewInterface> _view;
@@ -58,8 +62,19 @@ static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-bac
 }
 
 
-- (void)setResponseModel:(nonnull TrackListResponse *)response{
-    [_view setViewModel:response];
+- (void)setResponseModel:(nonnull TrackListResponseModel *)response{
+    NSArray *tracksVM = [self p_getViewModelArray:response];
+    [_view setViewModel:[[ShareViewModel alloc] initWithTracks:tracksVM error:response.error]];
+}
+
+- (nonnull NSArray *) p_getViewModelArray:(TrackListResponseModel *) responseModel{
+    NSArray *tracks = responseModel.trackList.tracks;
+    
+    if (tracks.count > kViewModelMaxArraySize) {
+        return [tracks subarrayWithRange:NSMakeRange(0, kViewModelMaxArraySize)];
+    }else{
+        return responseModel.trackList.tracks;
+    }
 }
 
 @end

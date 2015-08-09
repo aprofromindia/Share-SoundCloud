@@ -11,6 +11,6 @@
 
 @protocol SharePresenter <NSObject>
 
-- (void) setResponseModel:(nonnull TrackListResponse *) response;
+- (void) setResponseModel:(nonnull TrackListResponseModel *) response;
 
 @end

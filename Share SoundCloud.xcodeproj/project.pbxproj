@@ -34,6 +34,7 @@
 		A26A11BE1B760D1E0089C7C0 /* RESTClientImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11BD1B760D1E0089C7C0 /* RESTClientImpl.m */; };
 		A26A11C31B760D3A0089C7C0 /* TrackListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11C21B760D3A0089C7C0 /* TrackListInteractor.m */; };
 		A26A11C61B7624AF0089C7C0 /* GamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */; };
+		A271BE661B780A350053B2B9 /* ShareViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE651B780A350053B2B9 /* ShareViewModel.m */; };
 		A2CD4C681B72119C00320DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C671B72119C00320DB8 /* main.m */; };
 		A2CD4C6B1B72119C00320DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6A1B72119C00320DB8 /* AppDelegate.m */; };
 		A2CD4C6E1B72119C00320DB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6D1B72119C00320DB8 /* ViewController.m */; };
@@ -107,6 +108,8 @@
 		A26A11C21B760D3A0089C7C0 /* TrackListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackListInteractor.m; sourceTree = "<group>"; };
 		A26A11C41B76236B0089C7C0 /* ShareViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewInterface.h; path = Views/ShareViewInterface.h; sourceTree = "<group>"; };
 		A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GamCollectionViewCell.xib; path = Views/GamCollectionViewCell.xib; sourceTree = "<group>"; };
+		A271BE641B780A350053B2B9 /* ShareViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewModel.h; path = Presenters/ViewModels/ShareViewModel.h; sourceTree = "<group>"; };
+		A271BE651B780A350053B2B9 /* ShareViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareViewModel.m; path = Presenters/ViewModels/ShareViewModel.m; sourceTree = "<group>"; };
 		A2CD4C621B72119C00320DB8 /* Share SoundCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share SoundCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CD4C661B72119C00320DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2CD4C671B72119C00320DB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -252,6 +255,7 @@
 		A26A11B31B7607BB0089C7C0 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				A271BE671B780A3A0053B2B9 /* ViewModels */,
 				A26A11B91B760BE10089C7C0 /* SharePresenter.h */,
 				A26A11B01B7607B60089C7C0 /* SharePresenterImpl.h */,
 				A26A11B11B7607B60089C7C0 /* SharePresenterImpl.m */,
@@ -278,6 +282,15 @@
 				A26A11C21B760D3A0089C7C0 /* TrackListInteractor.m */,
 			);
 			path = Interactors;
+			sourceTree = "<group>";
+		};
+		A271BE671B780A3A0053B2B9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A271BE641B780A350053B2B9 /* ShareViewModel.h */,
+				A271BE651B780A350053B2B9 /* ShareViewModel.m */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		A2CD4C591B72119C00320DB8 = {
@@ -636,6 +649,7 @@
 			files = (
 				A26A11B71B760B400089C7C0 /* TrackListRepositoryImpl.m in Sources */,
 				A26A118A1B72C3020089C7C0 /* GameCollectionViewCell.m in Sources */,
+				A271BE661B780A350053B2B9 /* ShareViewModel.m in Sources */,
 				A26A11C31B760D3A0089C7C0 /* TrackListInteractor.m in Sources */,
 				A26A117C1B72B5F60089C7C0 /* ShareViewController.m in Sources */,
 				A26A11BE1B760D1E0089C7C0 /* RESTClientImpl.m in Sources */,

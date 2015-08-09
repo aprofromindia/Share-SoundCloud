@@ -10,6 +10,15 @@
 
 @implementation GameCollectionViewDelegate
 
+- (nonnull instancetype)initWithProvider:(nonnull id<DataProvider>)provider
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
     
 }

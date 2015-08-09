@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 @import UIKit;
+#import "ShareViewInterface.h"
 
 @interface GameCollectionViewDelegate : NSObject <UICollectionViewDelegate>
 
+- (nonnull instancetype)initWithProvider:(nonnull id<DataProvider>) provider NS_DESIGNATED_INITIALIZER;
+
+- (nullable instancetype)init NS_UNAVAILABLE;
 @end

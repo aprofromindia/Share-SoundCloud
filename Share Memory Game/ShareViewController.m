@@ -11,12 +11,11 @@
 #import "ShareViewInterface.h"
 #import "GameCollectionViewDataSource.h"
 #import "GameCollectionViewDelegate.h"
-#import "TrackListResponseModel.h"
+#import "ShareViewModel.h"
 
-@interface ShareViewController () <ShareViewInterface>{
-    __weak IBOutlet UICollectionView *_collectionView;
+@interface ShareViewController () <ShareViewInterface, DataProvider>{
+    IBOutlet UICollectionView *__weak _collectionView;
     SharePresenterImpl *_presenter;
-    TrackListResponseModel *_viewModel;
     GameCollectionViewDataSource *_collectionViewDS;
     GameCollectionViewDelegate *_collectionViewDelegate;
 }
@@ -44,10 +43,10 @@
 #pragma mark - private methods.
 
 - (void)p_setupCollectionView {
-    _collectionViewDelegate = [GameCollectionViewDelegate new];
-    _collectionViewDS = [GameCollectionViewDataSource new];
-    
+    _collectionViewDelegate = [[GameCollectionViewDelegate alloc] initWithProvider:self];
     _collectionView.delegate = _collectionViewDelegate;
+    
+    _collectionViewDS = [[GameCollectionViewDataSource alloc] initWithProvider:self];
     _collectionView.dataSource = _collectionViewDS;
 }
 
@@ -70,13 +69,17 @@
 
 #pragma mark - view interface methods
 
-- (void)setViewModel:(TrackListResponseModel *)vieWModel{
+- (void)setViewModel:(ShareViewModel *)vieWModel{
     _viewModel = vieWModel;
     
     if (!vieWModel.error) {
         [_collectionView reloadData];
     }else{
-        [[[UIAlertView alloc] init] show];
+        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Network Error", nil)
+                                            message:NSLocalizedString(@"Please try again!", nil)
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        [self presentViewController:alertC animated:YES completion:nil];
     }
 }
 

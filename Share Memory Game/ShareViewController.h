@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ShareViewModel;
 
 @interface ShareViewController : UIViewController
+
+@property (nonnull, nonatomic, strong) ShareViewModel *viewModel;
 
 @end

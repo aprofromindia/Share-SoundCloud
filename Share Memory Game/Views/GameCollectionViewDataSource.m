@@ -14,6 +14,15 @@ static NSString *const kCellIdentifier = @"GameCollectionViewCell";
 
 @implementation GameCollectionViewDataSource
 
+- (nonnull instancetype)initWithProvider:(nonnull id<DataProvider>)provider
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     UICollectionViewCell *viewCell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];

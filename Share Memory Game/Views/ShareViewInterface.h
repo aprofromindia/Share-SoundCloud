@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+@class ShareViewModel;
 
 @protocol ShareViewInterface <NSObject>
 
-- (void) setViewModel:(nonnull TrackListResponse *) vieWModel;
+- (void) setViewModel:(nonnull ShareViewModel *) vieWModel;
 
 - (nonnull NSExtensionContext *) extensionContext;
+
+@end
+
+
+@protocol DataProvider <NSObject>
+
+- (nonnull ShareViewModel *) viewModel;
 
 @end
