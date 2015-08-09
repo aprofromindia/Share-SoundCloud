@@ -12,7 +12,6 @@
 #import "TrackListRepositoryImpl.h"
 #import "RESTClientImpl.h"
 @import MobileCoreServices;
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
 static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-back-to-back-freestyle";
 
@@ -38,21 +37,19 @@ static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-bac
 }
 
 
-/// Extracts track/playlist URL from extension context.
-
+// Extracts track/playlist URL from extension context.
 - (void)p_extractPermalink{
     
     for (NSExtensionItem *item in _view.extensionContext.inputItems) {
         
         for (NSItemProvider *provider in item.attachments) {
             
-            @weakify(self);
             [provider loadItemForTypeIdentifier:(NSString *) kUTTypeURL options:nil
                               completionHandler:^(id<NSSecureCoding> item, NSError *error) {
+                                  
                                   if (!error) {
-                                      @strongify(self);
-                                      self->_tracksInteractor.trackURL = ((NSURL *) item).absoluteString;
-                                      [self->_tracksInteractor fetchTracks];
+//                                      NSString *trackURL = ((NSURL *) item).absoluteString;
+                                      [_tracksInteractor fetchTracksWithURL:kURL];
                                   }
                               }];
         }

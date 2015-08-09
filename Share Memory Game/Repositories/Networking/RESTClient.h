@@ -7,9 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+@class Track, TrackList;
 
 @protocol RESTClient <NSObject>
 
-- (void) fetchTrackListWithC;
+- (void) fetchTrackListforUser:(nonnull NSString *) userId
+                       success:(nonnull void (^)(TrackList *__nullable)) successBlock
+                         error:(nonnull void(^)(NSError *__nullable)) errorBlock;
+
+- (void) fetchTrackWithURL:(nonnull NSString *) trackURL
+                    success:(nonnull void (^)(Track *__nullable)) successBlock
+                         error:(nonnull void(^)(NSError *__nullable)) errorBlock;
 
 @end

@@ -27,14 +27,25 @@
     return self;
 }
 
-- (void)fetchTracks{
-    
-    @weakify(self);
-    [_repository fetchTrackListWithHandler:^(TrackList *tracks) {
-        @strongify(self);
+- (void)fetchTracksWithURL:(NSString *)trackURL{
+    [self p_fetchUserIdWithURL:trackURL];
+}
 
-        self->_trackList = tracks;
-        [self->_presenter setTracks:self->_trackList];
+#pragma mark - private methods
+
+- (void)p_fetchTracksWithId:(NSString *) userId{
+    [_repository fetchTrackListforUser:(NSString *) userId success:^(TrackList * tracks) {
+        _trackList = tracks;
+    } error:^(NSError *error) {
+        
+    }];
+}
+
+- (void)p_fetchUserIdWithURL:(NSString *) trackURL{
+    [_repository fetchUserIdWithURL:(NSString *) trackURL success:^(NSString *userId) {
+        [self p_fetchTracksWithId:userId];
+    } error:^(NSError *error) {
+        
     }];
 }
 

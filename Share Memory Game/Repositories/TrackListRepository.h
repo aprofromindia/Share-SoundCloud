@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-@class TrackList;
+@class Track, TrackList;
 
 @protocol TrackListRepository <NSObject>
 
-- (void) fetchTrackListWithHandler:(void(^)(TrackList *)) handler;
+- (void) fetchTrackListforUser:(nonnull NSString *) userId
+                       success:(nonnull void (^)(TrackList *__nullable)) successBlock
+                         error:(nonnull void(^)(NSError *__nullable)) errorBlock;
 
+- (void) fetchUserIdWithURL:(nonnull NSString *) trackURL
+                    success:(nonnull void (^)(NSString *__nullable)) successBlock
+                      error:(nonnull void(^)(NSError *__nullable)) errorBlock;
 @end

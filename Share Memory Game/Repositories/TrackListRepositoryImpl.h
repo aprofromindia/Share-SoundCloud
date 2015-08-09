@@ -12,8 +12,12 @@
 
 @interface TrackListRepositoryImpl : NSObject <TrackListRepository>
 
+NS_ASSUME_NONNULL_BEGIN
+
 - (instancetype)initWithRESTClient:(id<RESTClient>) restClient NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)init NS_UNAVAILABLE;
+
+NS_ASSUME_NONNULL_END
 
 @end

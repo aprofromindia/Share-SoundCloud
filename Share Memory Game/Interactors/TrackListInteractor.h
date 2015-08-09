@@ -20,6 +20,6 @@
 
 - (nullable instancetype)init NS_UNAVAILABLE;
 
-- (void) fetchTracks;
+- (void) fetchTracksWithURL:(nonnull NSString *) trackURL;
 
 @end

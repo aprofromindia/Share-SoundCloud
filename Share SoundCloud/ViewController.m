@@ -8,9 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
+static NSString *const kSoundCloudLink = @"soundcloud://";
 
 @implementation ViewController
 
@@ -22,6 +20,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)startSCBtnPressed {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kSoundCloudLink]];
 }
 
 @end

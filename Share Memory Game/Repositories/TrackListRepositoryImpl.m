@@ -10,6 +10,10 @@
 #import "TrackList.h"
 #import "RESTClient.h"
 
+@interface TrackListRepositoryImpl ()
+
+@end
+
 @implementation TrackListRepositoryImpl{
     id<RESTClient> _restClient;
 }
@@ -23,7 +27,31 @@
     return self;
 }
 
-- (void)fetchTrackListWithHandler:(void (^)(TrackList *))handler{
-//    [_restClient ];
+- (void)fetchUserIdWithURL:(nonnull NSString *)trackURL
+                   success:(nonnull void (^)(NSString * __nullable))successBlock
+                     error:(nonnull void (^)(NSError * __nullable))errorBlock{
+    
+    [_restClient fetchTrackWithURL:trackURL success:^(Track *track) {
+        [self fetchTrackListforUser:track.userId success:^(TrackList *tracks) {
+            
+        } error:^(NSError *error) {
+            
+        }];
+        
+    } error:^(NSError *error) {
+        errorBlock(error);
+    }];
 }
+
+- (void)fetchTrackListforUser:(nonnull NSString *)userId
+                      success:(nonnull void (^)(TrackList * __nullable))successBlock
+                        error:(nonnull void (^)(NSError * __nullable))errorBlock{
+    
+    [_restClient fetchTrackListforUser:userId success:^(TrackList *tracks) {
+        successBlock(tracks);
+    } error:^(NSError *error) {
+        errorBlock(error);
+    }];
+}
+
 @end

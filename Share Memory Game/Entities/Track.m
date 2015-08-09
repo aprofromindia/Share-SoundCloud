@@ -15,7 +15,6 @@
                                                        @"id" : @"identity",
                                                        @"user_id" : @"userId",
                                                        @"artwork_url" : @"artworkURL"
-                                                       
                                                        }];
 }
 
