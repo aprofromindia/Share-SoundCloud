@@ -43,6 +43,7 @@
 		A2CD4C821B72119C00320DB8 /* Share_SoundCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C811B72119C00320DB8 /* Share_SoundCloudTests.m */; };
 		A2FC53011B7758F60060B350 /* GameCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC53001B7758F60060B350 /* GameCollectionViewDataSource.m */; };
 		A2FC53041B7759150060B350 /* GameCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC53031B7759150060B350 /* GameCollectionViewDelegate.m */; };
+		A2FC530E1B7800340060B350 /* TrackListResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC530D1B7800340060B350 /* TrackListResponseModel.m */; };
 		CDB2DFC4F28958A04651BC73 /* libPods-Share Memory Game.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE280C28F7930746A1D04A64 /* libPods-Share Memory Game.a */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +125,8 @@
 		A2FC53001B7758F60060B350 /* GameCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCollectionViewDataSource.m; path = Views/GameCollectionViewDataSource.m; sourceTree = "<group>"; };
 		A2FC53021B7759150060B350 /* GameCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCollectionViewDelegate.h; path = Views/GameCollectionViewDelegate.h; sourceTree = "<group>"; };
 		A2FC53031B7759150060B350 /* GameCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCollectionViewDelegate.m; path = Views/GameCollectionViewDelegate.m; sourceTree = "<group>"; };
+		A2FC530C1B7800340060B350 /* TrackListResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackListResponseModel.h; path = Responses/TrackListResponseModel.h; sourceTree = "<group>"; };
+		A2FC530D1B7800340060B350 /* TrackListResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackListResponseModel.m; path = Responses/TrackListResponseModel.m; sourceTree = "<group>"; };
 		AC374DE1E011443C98070F05 /* libPods-Share SoundCloudTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Share SoundCloudTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB61891B6B25D8387087B5D6 /* Pods-Share SoundCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share SoundCloud.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share SoundCloud/Pods-Share SoundCloud.release.xcconfig"; sourceTree = "<group>"; };
 		E33F2C10B02845C32E569761 /* Pods-Share Memory Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share Memory Game.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Share Memory Game/Pods-Share Memory Game.debug.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +273,7 @@
 		A26A11BF1B760D3A0089C7C0 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				A2FC530F1B7800390060B350 /* Response Models */,
 				A26A11C11B760D3A0089C7C0 /* TrackListInteractor.h */,
 				A26A11C21B760D3A0089C7C0 /* TrackListInteractor.m */,
 			);
@@ -357,6 +361,15 @@
 				A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */,
 			);
 			name = GameCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		A2FC530F1B7800390060B350 /* Response Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2FC530C1B7800340060B350 /* TrackListResponseModel.h */,
+				A2FC530D1B7800340060B350 /* TrackListResponseModel.m */,
+			);
+			name = "Response Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -626,6 +639,7 @@
 				A26A11C31B760D3A0089C7C0 /* TrackListInteractor.m in Sources */,
 				A26A117C1B72B5F60089C7C0 /* ShareViewController.m in Sources */,
 				A26A11BE1B760D1E0089C7C0 /* RESTClientImpl.m in Sources */,
+				A2FC530E1B7800340060B350 /* TrackListResponseModel.m in Sources */,
 				A26A11AA1B76074D0089C7C0 /* TrackList.m in Sources */,
 				A26A11A61B7607320089C7C0 /* Track.m in Sources */,
 				A26A11B21B7607B60089C7C0 /* SharePresenterImpl.m in Sources */,

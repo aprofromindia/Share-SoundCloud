@@ -7,9 +7,10 @@
 //
 
 #import "GameCollectionViewDataSource.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 static const int kMaxNumOfCellView = 16;
-static NSString *const kCellIdentifier = @"Game Collection View Cell";
+static NSString *const kCellIdentifier = @"GameCollectionViewCell";
 
 @implementation GameCollectionViewDataSource
 

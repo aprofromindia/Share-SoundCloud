@@ -33,7 +33,7 @@ static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-bac
 
 
 - (void) setup{
-    [_tracksInteractor fetchTracksWithURL:kURL];
+    [_tracksInteractor fetchTracksWithURL:kURL]; // TODO: - remove
 //    [self p_extractPermalink];
 }
 
@@ -58,8 +58,8 @@ static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-bac
 }
 
 
-- (void)setTracks:(TrackList *)trackList{
-    [_view setViewModel:trackList.tracks];
+- (void)setResponseModel:(nonnull TrackListResponse *)response{
+    [_view setViewModel:response];
 }
 
 @end

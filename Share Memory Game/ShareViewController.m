@@ -11,11 +11,12 @@
 #import "ShareViewInterface.h"
 #import "GameCollectionViewDataSource.h"
 #import "GameCollectionViewDelegate.h"
+#import "TrackListResponseModel.h"
 
 @interface ShareViewController () <ShareViewInterface>{
     __weak IBOutlet UICollectionView *_collectionView;
     SharePresenterImpl *_presenter;
-    NSArray *_viewModel;
+    TrackListResponseModel *_viewModel;
     GameCollectionViewDataSource *_collectionViewDS;
     GameCollectionViewDelegate *_collectionViewDelegate;
 }
@@ -69,9 +70,14 @@
 
 #pragma mark - view interface methods
 
-- (void)setViewModel:(NSArray *)vieWModel{
+- (void)setViewModel:(TrackListResponseModel *)vieWModel{
     _viewModel = vieWModel;
-    [_collectionView reloadData];
+    
+    if (!vieWModel.error) {
+        [_collectionView reloadData];
+    }else{
+        [[[UIAlertView alloc] init] show];
+    }
 }
 
 

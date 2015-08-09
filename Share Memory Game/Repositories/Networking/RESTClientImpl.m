@@ -9,6 +9,7 @@
 #import "RESTClientImpl.h"
 #import "Track.h"
 #import "TrackList.h"
+#import <libextobjc/extobjc.h>
 
 static NSString *const kBaseURL = @"https://api.soundcloud.com";
 
@@ -20,11 +21,26 @@ static const int kHttpOkStatus = 200;
 
 static RESTClientImpl *sInstance;
 
-
-@implementation RESTClientImpl{
+@interface RESTClientImpl (){
     NSURLSession *_urlSession;
 }
 
+@property (nonnull, nonatomic, copy) void (^trackSuccessBlock)(Track *);
+
+@property (nonnull, nonatomic, copy) void (^trackFailureBlock)(NSError *);
+
+@property (nonnull, nonatomic, copy) void (^trackListSuccessBlock)(TrackList *);
+
+@property (nonnull, nonatomic, copy) void (^trackListFailureBlock)(NSError *);
+
+@property (nonnull, nonatomic, copy) void (^requestSuccessBlock)(NSData *);
+
+@property (nonnull, nonatomic, copy) void (^requestFailureBlock)(NSError *);
+
+@end
+
+
+@implementation RESTClientImpl
 
 + (instancetype)sharedInstance{
     static dispatch_once_t onceToken;
@@ -40,6 +56,9 @@ static RESTClientImpl *sInstance;
                   failure:(void (^)(NSError *))failureBlock{
     static NSString *const kResolvePath = @"/resolve";
     
+    self.trackSuccessBlock = successBlock;
+    self.trackFailureBlock = failureBlock;
+    
     [self p_requestWithURL:[kBaseURL stringByAppendingString:kResolvePath] params:@{kClientIdKey: kClientIdValue,
                                                                                     kURLKey: trackURL}
                    success:^(NSData *data) {
@@ -47,12 +66,12 @@ static RESTClientImpl *sInstance;
                        Track *track = [[Track alloc] initWithData:data error:&jsonError];
                        
                        if (!jsonError) {
-                           successBlock(track);
+                           _trackSuccessBlock(track);
                        }else{
-                           failureBlock(jsonError);
+                           _trackFailureBlock(jsonError);
                        }
                    } failure:^(NSError *error) {
-                       failureBlock(error);
+                       _trackFailureBlock(error);
                    }];
 }
 
@@ -61,6 +80,9 @@ static RESTClientImpl *sInstance;
                         failure:(void (^)(NSError *))failureBlock{
     static NSString *const kUserTracksPath = @"/users/%@/tracks";
     
+    self.trackListSuccessBlock = successBlock;
+    self.trackListFailureBlock = failureBlock;
+    
     [self p_requestWithURL:[kBaseURL stringByAppendingFormat:kUserTracksPath, userId] params:@{kClientIdKey : kClientIdValue}
                    success:^(NSData *data) {
                        NSError *jsonError;
@@ -68,12 +90,12 @@ static RESTClientImpl *sInstance;
                        
                        if (!jsonError) {
                            TrackList *trackList = [[TrackList alloc] initWithTracks:tracks];
-                           successBlock(trackList);
+                           _trackListSuccessBlock(trackList);
                        }else{
-                           failureBlock(jsonError);
+                           _trackListFailureBlock(jsonError);
                        }
                    } failure:^(NSError *error) {
-                       failureBlock(error);
+                       _trackListFailureBlock(error);
                    }];
 }
 
@@ -84,15 +106,21 @@ static RESTClientImpl *sInstance;
                  success:(nonnull void (^)(NSData *__nullable)) successBlock
                  failure:(nonnull void (^)(NSError *__nullable)) failureBlock{
     
+    self.requestSuccessBlock = successBlock;
+    self.requestFailureBlock = failureBlock;
+    
     NSURL *url = [NSURL URLWithString:[urlString stringByAppendingFormat:@"?%@", [self p_urlParams:params]]];
+    
+    @weakify(self);
     [[_urlSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
+        @strongify(self);
         NSHTTPURLResponse *httpResp = (NSHTTPURLResponse *) response;
         
         if (!error && httpResp.statusCode == kHttpOkStatus) {
-            successBlock(data);
+            self.requestSuccessBlock(data);
         }else{
-            failureBlock(error);
+            self.requestFailureBlock(error);
         }
     }] resume];
 }

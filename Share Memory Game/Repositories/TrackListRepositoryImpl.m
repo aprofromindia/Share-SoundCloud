@@ -11,9 +11,21 @@
 #import "RESTClient.h"
 #import "TrackListInteractor.h"
 
-@implementation TrackListRepositoryImpl{
+@interface TrackListRepositoryImpl (){
     id<RESTClient> _restClient;
 }
+
+@property (nonnull, nonatomic, copy) void (^userIDSuccessBlock)(NSString *);
+
+@property (nonnull, nonatomic, copy) void (^userIDErrorBlock)(NSError *);
+
+@property (nonnull, nonatomic, copy) void (^trackListSuccessBlock)(TrackList *);
+
+@property (nonnull, nonatomic, copy) void (^trackListErrorBlock)(NSError *);
+
+@end
+
+@implementation TrackListRepositoryImpl
 
 - (instancetype)initWithRESTClient:(id<RESTClient>)restClient{
     self = [super init];
@@ -26,22 +38,26 @@
 - (void)fetchUserIdWithURL:(nonnull NSString *)trackURL
                    success:(nonnull void (^)(NSString * __nullable))successBlock
                      error:(nonnull void (^)(NSError * __nullable))errorBlock{
+    self.userIDSuccessBlock = successBlock;
+    self.userIDErrorBlock = errorBlock;
     
     [_restClient fetchTrackWithURL:trackURL success:^(Track *track) {
-        successBlock(track.userId);
+        _userIDSuccessBlock(track.userId);
     } failure:^(NSError *error) {
-        errorBlock(error);
+        _userIDErrorBlock(error);
     }];
 }
 
 - (void)fetchTrackListforUser:(nonnull NSString *)userId
                       success:(nonnull void (^)(TrackList * __nullable))successBlock
                         error:(nonnull void (^)(NSError * __nullable))errorBlock{
+    self.trackListSuccessBlock = successBlock;
+    self.trackListErrorBlock = errorBlock;
     
     [_restClient fetchTrackListforUser:userId success:^(TrackList *tracks) {
-        successBlock(tracks);
+        _trackListSuccessBlock(tracks);
     } failure:^(NSError *error) {
-        errorBlock(error);
+        _trackListErrorBlock(error);
     }];
 }
 

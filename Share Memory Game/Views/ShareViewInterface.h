@@ -10,7 +10,7 @@
 
 @protocol ShareViewInterface <NSObject>
 
-- (void) setViewModel:(nonnull NSArray *) vieWModel;
+- (void) setViewModel:(nonnull TrackListResponse *) vieWModel;
 
 - (nonnull NSExtensionContext *) extensionContext;
 

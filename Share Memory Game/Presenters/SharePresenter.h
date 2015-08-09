@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-@class TrackList;
+@class TrackListResponseModel;
 
 @protocol SharePresenter <NSObject>
 
-- (void) setTracks:(nonnull TrackList *) trackList;
+- (void) setResponseModel:(nonnull TrackListResponse *) response;
 
 @end

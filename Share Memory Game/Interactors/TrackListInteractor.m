@@ -8,12 +8,13 @@
 
 #import "TrackListInteractor.h"
 #import "TrackList.h"
+#import "TrackListResponseModel.h"
 
 @implementation TrackListInteractor{
     TrackList *_trackList;
     id<SharePresenter> _presenter;
     id<TrackListRepository> _repository;
-    NSError *_dataError;
+    NSError *_responseError;
 }
 
 - (instancetype)initWithPresenter:(id<SharePresenter>) presenter
@@ -37,16 +38,17 @@
     [_repository fetchUserIdWithURL:(NSString *) trackURL success:^(NSString *userId) {
         [self p_fetchTracksWithId:userId];
     } error:^(NSError *error) {
-        _dataError = error;
+        _responseError = error;
     }];
 }
 
 - (void)p_fetchTracksWithId:(NSString *) userId{
     [_repository fetchTrackListforUser:(NSString *) userId success:^(TrackList * tracks) {
         _trackList = tracks;
-        [_presenter setTracks:_trackList];
+        [_presenter setResponseModel:[[TrackListResponseModel alloc] initWithTrackList:_trackList error:nil]];
     } error:^(NSError *error) {
-        _dataError = error;
+        _responseError = error;
+        [_presenter setResponseModel:[[TrackListResponseModel alloc] initWithTrackList:nil error:_responseError]];
     }];
 }
 
