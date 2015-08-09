@@ -13,6 +13,8 @@
 
 @interface TrackListInteractor : NSObject
 
+@property (nonnull, nonatomic, copy) NSString *trackURL;
+
 - (nonnull instancetype)initWithPresenter:(nonnull id<SharePresenter>) presenter
                        repository:(nonnull id<TrackListRepository>) repository NS_DESIGNATED_INITIALIZER;
 

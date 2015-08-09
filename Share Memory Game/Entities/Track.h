@@ -15,4 +15,10 @@
 
 @interface Track : JSONModel
 
+@property(nonnull, nonatomic, copy) NSString *identity;
+
+@property(nonnull, nonatomic, copy) NSString *userId;
+
+@property(nonnull, nonatomic, copy) NSString *artworkURL;
+
 @end

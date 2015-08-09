@@ -26,8 +26,7 @@
     [_presenter setup];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self p_animateViewAppearance];
 }
@@ -38,8 +37,8 @@
 
 #pragma mark - private methods.
 
-- (void)p_animateViewAppearance
-{
+- (void)p_animateViewAppearance{
+    
     self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
     [UIView animateWithDuration:0.25 animations:^{
         self.view.transform = CGAffineTransformIdentity;
@@ -47,6 +46,7 @@
 }
 
 - (void)p_animateViewDisappearance {
+    
     [UIView animateWithDuration:0.20 animations:^{
         self.view.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
     } completion:^(BOOL finished) {

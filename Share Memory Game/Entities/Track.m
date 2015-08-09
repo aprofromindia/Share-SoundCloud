@@ -10,4 +10,13 @@
 
 @implementation Track
 
++ (JSONKeyMapper *)keyMapper{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{
+                                                       @"id" : @"identity",
+                                                       @"user_id" : @"userId",
+                                                       @"artwork_url" : @"artworkURL"
+                                                       
+                                                       }];
+}
+
 @end

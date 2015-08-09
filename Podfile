@@ -2,7 +2,7 @@
 # platform :ios, '6.0'
 
 target 'Share SoundCloud' do
-	pod 'AFNetworking', '~>2.5.4'
+	pod 'AFNetworking'
 end
 
 target 'Share SoundCloudTests' do
@@ -14,4 +14,3 @@ target 'Share Memory Game' do
 	pod 'ReactiveCocoa', '~>2.5'
 	pod 'JSONModel', '~>1.1.0'
 end
-

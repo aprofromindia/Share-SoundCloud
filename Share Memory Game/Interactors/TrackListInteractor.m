@@ -8,6 +8,7 @@
 
 #import "TrackListInteractor.h"
 #import "TrackList.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @implementation TrackListInteractor{
     TrackList *_trackList;
@@ -16,8 +17,8 @@
 }
 
 - (instancetype)initWithPresenter:(id<SharePresenter>) presenter
-                       repository:(id<TrackListRepository>) repository
-{
+                       repository:(id<TrackListRepository>) repository{
+    
     self = [super init];
     if (self) {
         _presenter = presenter;
@@ -27,9 +28,14 @@
 }
 
 - (void)fetchTracks{
-//    [_repository fetchTrackListWithHandler:<#(id)#>]
-    _trackList = [TrackList new];
-    [_presenter setTracks:_trackList];
+    
+    @weakify(self);
+    [_repository fetchTrackListWithHandler:^(TrackList *tracks) {
+        @strongify(self);
+
+        self->_trackList = tracks;
+        [self->_presenter setTracks:self->_trackList];
+    }];
 }
 
 @end

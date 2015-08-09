@@ -12,6 +12,6 @@
 
 @interface TrackList :  JSONModel
 
-@property(nonnull, nonatomic, copy) NSArray <Track, ConvertOnDemand>* tracks;
+@property(nonnull, nonatomic, strong) NSArray <Track, ConvertOnDemand>* tracks;
 
 @end
