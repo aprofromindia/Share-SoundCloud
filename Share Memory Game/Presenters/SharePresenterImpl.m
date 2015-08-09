@@ -33,7 +33,8 @@ static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-bac
 
 
 - (void) setup{
-    [self p_extractPermalink];
+    [_tracksInteractor fetchTracksWithURL:kURL];
+//    [self p_extractPermalink];
 }
 
 
@@ -48,8 +49,8 @@ static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-bac
                               completionHandler:^(id<NSSecureCoding> item, NSError *error) {
                                   
                                   if (!error) {
-//                                      NSString *trackURL = ((NSURL *) item).absoluteString;
-                                      [_tracksInteractor fetchTracksWithURL:kURL];
+                                      NSString *trackURL = ((NSURL *) item).absoluteString;
+                                      [_tracksInteractor fetchTracksWithURL:trackURL];
                                   }
                               }];
         }

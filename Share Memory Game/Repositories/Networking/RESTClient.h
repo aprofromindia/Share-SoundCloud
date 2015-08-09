@@ -11,12 +11,12 @@
 
 @protocol RESTClient <NSObject>
 
+- (void) fetchTrackWithURL:(nonnull NSString *) trackURL
+                   success:(nonnull void (^)(Track *__nullable)) successBlock
+                     failure:(nonnull void(^)(NSError *__nullable)) failureBlock;
+
 - (void) fetchTrackListforUser:(nonnull NSString *) userId
                        success:(nonnull void (^)(TrackList *__nullable)) successBlock
-                         error:(nonnull void(^)(NSError *__nullable)) errorBlock;
-
-- (void) fetchTrackWithURL:(nonnull NSString *) trackURL
-                    success:(nonnull void (^)(Track *__nullable)) successBlock
-                         error:(nonnull void(^)(NSError *__nullable)) errorBlock;
+                         failure:(nonnull void(^)(NSError *__nullable)) failureBlock;
 
 @end

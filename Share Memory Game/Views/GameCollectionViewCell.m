@@ -8,6 +8,9 @@
 
 #import "GameCollectionViewCell.h"
 
-@implementation GameCollectionViewCell
+@implementation GameCollectionViewCell{
+    IBOutlet UIImageView *__weak imgView;
+    IBOutlet UIButton *__weak topBtn;
+}
 
 @end

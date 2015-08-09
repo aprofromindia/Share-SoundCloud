@@ -7,6 +7,7 @@
 //
 
 #import "RESTClientImpl.h"
+#import "Track.h"
 #import "TrackList.h"
 
 static NSString *const kBaseURL = @"https://api.soundcloud.com";
@@ -19,9 +20,6 @@ static const int kHttpOkStatus = 200;
 
 static RESTClientImpl *sInstance;
 
-@interface RESTClientImpl ()
-
-@end
 
 @implementation RESTClientImpl{
     NSURLSession *_urlSession;
@@ -37,24 +35,9 @@ static RESTClientImpl *sInstance;
     return sInstance;
 }
 
-- (void)fetchTrackListforUser:(NSString *)userId
-                      success:(void (^)(TrackList * ))successBlock
-                        error:(void (^)(NSError *))errorBlock{
-    
-    static NSString *const kUserTracksPath = @"/users/%@/tracks";
-    
-    [self p_requestWithURL:[kBaseURL stringByAppendingFormat:kUserTracksPath, userId] params:@{kClientIdKey : kClientIdValue}
-                   success:^(NSData *data) {
-                       
-                   } failure:^(NSError *error) {
-                       
-                   }];
-}
-
 - (void)fetchTrackWithURL:(NSString *)trackURL
                   success:(void (^)(Track *))successBlock
-                    error:(void (^)(NSError *))errorBlock{
-    
+                  failure:(void (^)(NSError *))failureBlock{
     static NSString *const kResolvePath = @"/resolve";
     
     [self p_requestWithURL:[kBaseURL stringByAppendingString:kResolvePath] params:@{kClientIdKey: kClientIdValue,
@@ -65,9 +48,32 @@ static RESTClientImpl *sInstance;
                        
                        if (!jsonError) {
                            successBlock(track);
+                       }else{
+                           failureBlock(jsonError);
                        }
                    } failure:^(NSError *error) {
+                       failureBlock(error);
+                   }];
+}
+
+- (void)fetchTrackListforUser:(NSString *)userId
+                      success:(void (^)(TrackList * ))successBlock
+                        failure:(void (^)(NSError *))failureBlock{
+    static NSString *const kUserTracksPath = @"/users/%@/tracks";
+    
+    [self p_requestWithURL:[kBaseURL stringByAppendingFormat:kUserTracksPath, userId] params:@{kClientIdKey : kClientIdValue}
+                   success:^(NSData *data) {
+                       NSError *jsonError;
+                       NSArray *tracks = [Track arrayOfModelsFromData:data error:&jsonError];
                        
+                       if (!jsonError) {
+                           TrackList *trackList = [[TrackList alloc] initWithTracks:tracks];
+                           successBlock(trackList);
+                       }else{
+                           failureBlock(jsonError);
+                       }
+                   } failure:^(NSError *error) {
+                       failureBlock(error);
                    }];
 }
 
@@ -93,9 +99,16 @@ static RESTClientImpl *sInstance;
 
 - (nonnull NSString *) p_urlParams:(nonnull NSDictionary *) dict{
     NSMutableString *urlParams = [NSMutableString new];
+    NSArray *keys = [dict allKeys];
     
-    for (NSString *key in [dict allKeys]) {
-        [urlParams appendFormat:@"%@=%@", key, dict[key]];
+    for (int i = 0 ; i < [keys count]; i++) {
+        id key = keys[i];
+        
+        if (i == (keys.count -1)) {
+            [urlParams appendFormat:@"%@=%@", key, dict[key]];
+        }else{
+            [urlParams appendFormat:@"%@=%@&", key, dict[key]];
+        }
     }
     return urlParams;
 }

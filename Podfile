@@ -11,6 +11,7 @@ target 'Share SoundCloudTests' do
 end
 
 target 'Share Memory Game' do
-	pod 'ReactiveCocoa', '~>2.5'
 	pod 'JSONModel', '~>1.1.0'
+    pod 'SDWebImage', '~>3.7.3'
+    pod 'libextobjc', '~>0.4.1'
 end

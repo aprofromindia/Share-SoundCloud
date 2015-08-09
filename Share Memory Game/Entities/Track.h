@@ -9,10 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <JSONModel/JSONModel.h>
 
-@protocol Track <NSObject>
-
-@end
-
 @interface Track : JSONModel
 
 /// Track id
@@ -22,6 +18,6 @@
 @property(nonnull, nonatomic, copy) NSString *userId;
 
 /// artwork Image URL.
-@property(nonnull, nonatomic, copy) NSString *artworkURL;
+@property(nonnull, nonatomic, copy) NSString<Optional> *artworkURL;
 
 @end

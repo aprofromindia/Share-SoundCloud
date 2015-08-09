@@ -7,19 +7,15 @@
 //
 
 #import "TrackListRepositoryImpl.h"
-#import "TrackList.h"
+#import "Track.h"
 #import "RESTClient.h"
-
-@interface TrackListRepositoryImpl ()
-
-@end
+#import "TrackListInteractor.h"
 
 @implementation TrackListRepositoryImpl{
     id<RESTClient> _restClient;
 }
 
-- (instancetype)initWithRESTClient:(id<RESTClient>) restClient
-{
+- (instancetype)initWithRESTClient:(id<RESTClient>)restClient{
     self = [super init];
     if (self) {
         _restClient = restClient;
@@ -32,13 +28,8 @@
                      error:(nonnull void (^)(NSError * __nullable))errorBlock{
     
     [_restClient fetchTrackWithURL:trackURL success:^(Track *track) {
-        [self fetchTrackListforUser:track.userId success:^(TrackList *tracks) {
-            
-        } error:^(NSError *error) {
-            
-        }];
-        
-    } error:^(NSError *error) {
+        successBlock(track.userId);
+    } failure:^(NSError *error) {
         errorBlock(error);
     }];
 }
@@ -49,7 +40,7 @@
     
     [_restClient fetchTrackListforUser:userId success:^(TrackList *tracks) {
         successBlock(tracks);
-    } error:^(NSError *error) {
+    } failure:^(NSError *error) {
         errorBlock(error);
     }];
 }

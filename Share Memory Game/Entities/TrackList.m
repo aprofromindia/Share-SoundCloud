@@ -10,4 +10,12 @@
 
 @implementation TrackList
 
+- (instancetype)initWithTracks:(NSArray *)tracks {
+    self = [super init];
+    if (self) {
+        _tracks = tracks;
+    }
+    return self;
+}
+
 @end

@@ -215,16 +215,11 @@
 		A26A11861B72BB490089C7C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2FC53051B77DC710060B350 /* Adapters */,
+				A2FC53061B77DC800060B350 /* GameCollectionViewCell */,
 				A26A11C41B76236B0089C7C0 /* ShareViewInterface.h */,
 				A26A117A1B72B5F60089C7C0 /* ShareViewController.h */,
 				A26A117B1B72B5F60089C7C0 /* ShareViewController.m */,
-				A2FC52FF1B7758F60060B350 /* GameCollectionViewDataSource.h */,
-				A2FC53001B7758F60060B350 /* GameCollectionViewDataSource.m */,
-				A2FC53021B7759150060B350 /* GameCollectionViewDelegate.h */,
-				A2FC53031B7759150060B350 /* GameCollectionViewDelegate.m */,
-				A26A11881B72C3020089C7C0 /* GameCollectionViewCell.h */,
-				A26A11891B72C3020089C7C0 /* GameCollectionViewCell.m */,
-				A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -341,6 +336,27 @@
 				A2CD4C801B72119C00320DB8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2FC53051B77DC710060B350 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				A2FC52FF1B7758F60060B350 /* GameCollectionViewDataSource.h */,
+				A2FC53001B7758F60060B350 /* GameCollectionViewDataSource.m */,
+				A2FC53021B7759150060B350 /* GameCollectionViewDelegate.h */,
+				A2FC53031B7759150060B350 /* GameCollectionViewDelegate.m */,
+			);
+			name = Adapters;
+			sourceTree = "<group>";
+		};
+		A2FC53061B77DC800060B350 /* GameCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A26A11881B72C3020089C7C0 /* GameCollectionViewCell.h */,
+				A26A11891B72C3020089C7C0 /* GameCollectionViewCell.m */,
+				A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */,
+			);
+			name = GameCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

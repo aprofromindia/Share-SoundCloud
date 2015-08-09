@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <JSONModel/JSONModel.h>
-#import "Track.h"
 
-@interface TrackList :  JSONModel
+@interface TrackList :  NSObject
 
-@property(nonnull, nonatomic, strong) NSArray <Track, ConvertOnDemand>* tracks;
+/// List of Tracks.
+@property(nonnull, nonatomic, strong, readonly) NSArray *tracks;
+
+NS_ASSUME_NONNULL_BEGIN
+
+-(instancetype)initWithTracks:(NSArray *) tracks NS_DESIGNATED_INITIALIZER;
+
+-(instancetype)init NS_UNAVAILABLE;
+
+NS_ASSUME_NONNULL_END
 
 @end

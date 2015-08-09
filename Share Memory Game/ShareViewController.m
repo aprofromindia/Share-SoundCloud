@@ -9,11 +9,15 @@
 #import "ShareViewController.h"
 #import "SharePresenterImpl.h"
 #import "ShareViewInterface.h"
+#import "GameCollectionViewDataSource.h"
+#import "GameCollectionViewDelegate.h"
 
 @interface ShareViewController () <ShareViewInterface>{
     __weak IBOutlet UICollectionView *_collectionView;
     SharePresenterImpl *_presenter;
     NSArray *_viewModel;
+    GameCollectionViewDataSource *_collectionViewDS;
+    GameCollectionViewDelegate *_collectionViewDelegate;
 }
 
 @end
@@ -24,6 +28,7 @@
     [super viewDidLoad];
     _presenter = [[SharePresenterImpl alloc] initWithView:self];
     [_presenter setup];
+    [self p_setupCollectionView];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -36,6 +41,14 @@
 }
 
 #pragma mark - private methods.
+
+- (void)p_setupCollectionView {
+    _collectionViewDelegate = [GameCollectionViewDelegate new];
+    _collectionViewDS = [GameCollectionViewDataSource new];
+    
+    _collectionView.delegate = _collectionViewDelegate;
+    _collectionView.dataSource = _collectionViewDS;
+}
 
 - (void)p_animateViewAppearance{
     
