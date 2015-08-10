@@ -9,7 +9,6 @@
 #import "RESTClientImpl.h"
 #import "Track.h"
 #import "TrackList.h"
-#import <libextobjc/extobjc.h>
 
 static NSString *const kBaseURL = @"https://api.soundcloud.com";
 
@@ -24,18 +23,6 @@ static RESTClientImpl *sInstance;
 @interface RESTClientImpl (){
     NSURLSession *_urlSession;
 }
-
-@property (nonnull, nonatomic, copy) void (^trackSuccessBlock)(Track *);
-
-@property (nonnull, nonatomic, copy) void (^trackFailureBlock)(NSError *);
-
-@property (nonnull, nonatomic, copy) void (^trackListSuccessBlock)(TrackList *);
-
-@property (nonnull, nonatomic, copy) void (^trackListFailureBlock)(NSError *);
-
-@property (nonnull, nonatomic, copy) void (^requestSuccessBlock)(NSData *);
-
-@property (nonnull, nonatomic, copy) void (^requestFailureBlock)(NSError *);
 
 @end
 
@@ -56,46 +43,43 @@ static RESTClientImpl *sInstance;
                   failure:(void (^)(NSError *))failureBlock{
     static NSString *const kResolvePath = @"/resolve";
     
-    self.trackSuccessBlock = successBlock;
-    self.trackFailureBlock = failureBlock;
-    
     [self p_requestWithURL:[kBaseURL stringByAppendingString:kResolvePath] params:@{kClientIdKey: kClientIdValue,
                                                                                     kURLKey: trackURL}
                    success:^(NSData *data) {
+                       
                        NSError *jsonError;
                        Track *track = [[Track alloc] initWithData:data error:&jsonError];
                        
                        if (!jsonError) {
-                           _trackSuccessBlock(track);
+                           successBlock(track);
                        }else{
-                           _trackFailureBlock(jsonError);
+                           failureBlock(jsonError);
                        }
                    } failure:^(NSError *error) {
-                       _trackFailureBlock(error);
+                       failureBlock(error);
                    }];
 }
+
 
 - (void)fetchTrackListforUser:(NSString *)userId
                       success:(void (^)(TrackList * ))successBlock
                         failure:(void (^)(NSError *))failureBlock{
     static NSString *const kUserTracksPath = @"/users/%@/tracks";
     
-    self.trackListSuccessBlock = successBlock;
-    self.trackListFailureBlock = failureBlock;
-    
     [self p_requestWithURL:[kBaseURL stringByAppendingFormat:kUserTracksPath, userId] params:@{kClientIdKey : kClientIdValue}
                    success:^(NSData *data) {
+                       
                        NSError *jsonError;
                        NSArray *tracks = [Track arrayOfModelsFromData:data error:&jsonError];
                        
                        if (!jsonError) {
                            TrackList *trackList = [[TrackList alloc] initWithTracks:tracks];
-                           _trackListSuccessBlock(trackList);
+                           successBlock(trackList);
                        }else{
-                           _trackListFailureBlock(jsonError);
+                           failureBlock(jsonError);
                        }
                    } failure:^(NSError *error) {
-                       _trackListFailureBlock(error);
+                       failureBlock(error);
                    }];
 }
 
@@ -106,25 +90,26 @@ static RESTClientImpl *sInstance;
                  success:(nonnull void (^)(NSData *__nullable)) successBlock
                  failure:(nonnull void (^)(NSError *__nullable)) failureBlock{
     
-    self.requestSuccessBlock = successBlock;
-    self.requestFailureBlock = failureBlock;
-    
     NSURL *url = [NSURL URLWithString:[urlString stringByAppendingFormat:@"?%@", [self p_urlParams:params]]];
     
-    @weakify(self);
     [[_urlSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
-        @strongify(self);
         NSHTTPURLResponse *httpResp = (NSHTTPURLResponse *) response;
         
         if (!error && httpResp.statusCode == kHttpOkStatus) {
-            self.requestSuccessBlock(data);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                successBlock(data);
+            });
         }else{
-            self.requestFailureBlock(error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                failureBlock(error);
+            });
         }
     }] resume];
 }
 
+
+/// Generates URL params from a NSDictionary.
 - (nonnull NSString *) p_urlParams:(nonnull NSDictionary *) dict{
     NSMutableString *urlParams = [NSMutableString new];
     NSArray *keys = [dict allKeys];

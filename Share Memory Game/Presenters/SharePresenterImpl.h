@@ -18,4 +18,6 @@
 
 - (void) setup;
 
+- (void)didSelectItemAtIndexPath:(NSInteger)index;
+
 @end

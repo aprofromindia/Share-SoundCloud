@@ -7,6 +7,10 @@
 //
 
 #import "ShareViewModel.h"
+#import "Track.h"
+#import "NSArray+Helper.h"
+
+static const int kNumberOfCells = 16;
 
 @implementation ShareViewModel
 
@@ -14,10 +18,21 @@
 {
     self = [super init];
     if (self) {
-        _tracks = tracks;
+        _tracks = [self p_setupVMWithTracks:tracks];
         _error = error;
     }
     return self;
+}
+
+- (nonnull NSArray *) p_setupVMWithTracks:(nonnull NSArray *) tracks{
+
+    NSMutableArray *tmpArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfCells];
+    
+    for (int i = 0; i < tracks.count; i++) {
+        [tmpArray addObject:tracks[i]];
+        [tmpArray addObject:tracks[i]];
+    }
+    return [tmpArray shuffled];
 }
 
 @end

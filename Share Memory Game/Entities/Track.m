@@ -18,4 +18,11 @@
                                                        }];
 }
 
++ (BOOL)propertyIsIgnored:(NSString *)propertyName{
+    if ([propertyName isEqualToString:@"displaying"]) {
+        return YES;
+    }
+    return NO;
+}
+
 @end

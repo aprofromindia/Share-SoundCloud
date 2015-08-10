@@ -10,4 +10,6 @@
 
 @interface GameCollectionViewCell : UICollectionViewCell
 
+@property(nonnull, nonatomic, weak) IBOutlet UIImageView *imgView;
+
 @end

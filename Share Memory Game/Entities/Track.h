@@ -20,4 +20,7 @@
 /// artwork Image URL.
 @property(nonnull, nonatomic, copy) NSString<Optional> *artworkURL;
 
+/// JSONModel Ignored bool property - set when Track is displayed.
+@property (nonatomic, assign, getter=isDisplaying) BOOL displaying;
+
 @end

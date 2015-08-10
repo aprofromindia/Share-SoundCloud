@@ -11,6 +11,6 @@
 
 @interface ShareViewController : UIViewController
 
-@property (nonnull, nonatomic, strong) ShareViewModel *viewModel;
+@property (nonnull, nonatomic, strong, readonly) ShareViewModel *viewModel;
 
 @end

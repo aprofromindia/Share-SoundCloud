@@ -35,6 +35,7 @@
 		A26A11C31B760D3A0089C7C0 /* TrackListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11C21B760D3A0089C7C0 /* TrackListInteractor.m */; };
 		A26A11C61B7624AF0089C7C0 /* GamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */; };
 		A271BE661B780A350053B2B9 /* ShareViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE651B780A350053B2B9 /* ShareViewModel.m */; };
+		A271BE6F1B791B050053B2B9 /* NSArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE6E1B791B050053B2B9 /* NSArray+Helper.m */; };
 		A2CD4C681B72119C00320DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C671B72119C00320DB8 /* main.m */; };
 		A2CD4C6B1B72119C00320DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6A1B72119C00320DB8 /* AppDelegate.m */; };
 		A2CD4C6E1B72119C00320DB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6D1B72119C00320DB8 /* ViewController.m */; };
@@ -110,6 +111,8 @@
 		A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GamCollectionViewCell.xib; path = Views/GamCollectionViewCell.xib; sourceTree = "<group>"; };
 		A271BE641B780A350053B2B9 /* ShareViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewModel.h; path = Presenters/ViewModels/ShareViewModel.h; sourceTree = "<group>"; };
 		A271BE651B780A350053B2B9 /* ShareViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareViewModel.m; path = Presenters/ViewModels/ShareViewModel.m; sourceTree = "<group>"; };
+		A271BE6D1B791B050053B2B9 /* NSArray+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Helper.h"; path = "Utils/NSArray+Helper.h"; sourceTree = "<group>"; };
+		A271BE6E1B791B050053B2B9 /* NSArray+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Helper.m"; path = "Utils/NSArray+Helper.m"; sourceTree = "<group>"; };
 		A2CD4C621B72119C00320DB8 /* Share SoundCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share SoundCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CD4C661B72119C00320DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2CD4C671B72119C00320DB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -195,6 +198,7 @@
 				A26A11BF1B760D3A0089C7C0 /* Interactors */,
 				A26A11A71B7607370089C7C0 /* Entities */,
 				A26A11AF1B76077E0089C7C0 /* Repository */,
+				A271BE6C1B7918A80053B2B9 /* Utils */,
 				A26A117D1B72B5F60089C7C0 /* MainInterface.storyboard */,
 				A26A11781B72B5F60089C7C0 /* Supporting Files */,
 			);
@@ -291,6 +295,15 @@
 				A271BE651B780A350053B2B9 /* ShareViewModel.m */,
 			);
 			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		A271BE6C1B7918A80053B2B9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A271BE6D1B791B050053B2B9 /* NSArray+Helper.h */,
+				A271BE6E1B791B050053B2B9 /* NSArray+Helper.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		A2CD4C591B72119C00320DB8 = {
@@ -656,6 +669,7 @@
 				A2FC530E1B7800340060B350 /* TrackListResponseModel.m in Sources */,
 				A26A11AA1B76074D0089C7C0 /* TrackList.m in Sources */,
 				A26A11A61B7607320089C7C0 /* Track.m in Sources */,
+				A271BE6F1B791B050053B2B9 /* NSArray+Helper.m in Sources */,
 				A26A11B21B7607B60089C7C0 /* SharePresenterImpl.m in Sources */,
 				A2FC53011B7758F60060B350 /* GameCollectionViewDataSource.m in Sources */,
 				A2FC53041B7759150060B350 /* GameCollectionViewDelegate.m in Sources */,

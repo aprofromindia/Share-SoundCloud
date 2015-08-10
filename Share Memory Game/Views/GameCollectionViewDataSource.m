@@ -8,29 +8,45 @@
 
 #import "GameCollectionViewDataSource.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "ShareViewModel.h"
+#import "GameCollectionViewCell.h"
+#import "Track.h"
 
-static const int kMaxNumOfCellView = 16;
 static NSString *const kCellIdentifier = @"GameCollectionViewCell";
 
-@implementation GameCollectionViewDataSource
+@implementation GameCollectionViewDataSource{
+    id<DataProvider> _provider;
+}
 
 - (nonnull instancetype)initWithProvider:(nonnull id<DataProvider>)provider
 {
     self = [super init];
     if (self) {
-        
+        _provider = provider;
     }
     return self;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *viewCell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
+    GameCollectionViewCell *viewCell = (GameCollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
+    
+    Track *track = _provider.viewModel.tracks[indexPath.row];
+    
+    NSString *artworkURL = track.artworkURL;
+    
+    [viewCell.imgView sd_setImageWithURL:[NSURL URLWithString:artworkURL]];
+    
+    if (track.isDisplaying) {
+        viewCell.imgView.hidden = NO;
+    }else{
+        viewCell.imgView.hidden = YES;
+    }
     return viewCell;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return kMaxNumOfCellView;
+    return _provider.viewModel.tracks.count;
 }
 
 @end

@@ -12,6 +12,7 @@
 #import "GameCollectionViewDataSource.h"
 #import "GameCollectionViewDelegate.h"
 #import "ShareViewModel.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface ShareViewController () <ShareViewInterface, DataProvider>{
     IBOutlet UICollectionView *__weak _collectionView;
@@ -29,6 +30,7 @@
     _presenter = [[SharePresenterImpl alloc] initWithView:self];
     [_presenter setup];
     [self p_setupCollectionView];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -43,7 +45,7 @@
 #pragma mark - private methods.
 
 - (void)p_setupCollectionView {
-    _collectionViewDelegate = [[GameCollectionViewDelegate alloc] initWithProvider:self];
+    _collectionViewDelegate = [[GameCollectionViewDelegate alloc] initWithPresenter:_presenter];
     _collectionView.delegate = _collectionViewDelegate;
     
     _collectionViewDS = [[GameCollectionViewDataSource alloc] initWithProvider:self];
@@ -70,18 +72,23 @@
 #pragma mark - view interface methods
 
 - (void)setViewModel:(ShareViewModel *)vieWModel{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     _viewModel = vieWModel;
     
     if (!vieWModel.error) {
         [_collectionView reloadData];
     }else{
-        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Network Error", nil)
-                                            message:NSLocalizedString(@"Please try again!", nil)
-                                     preferredStyle:UIAlertControllerStyleAlert];
-        
-        [self presentViewController:alertC animated:YES completion:nil];
+        [self p_displayNetworkErrorAlert];
     }
 }
 
+
+- (void)p_displayNetworkErrorAlert {
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Network Error", nil)
+                                                                    message:NSLocalizedString(@"Please try again!", nil)
+                                                             preferredStyle:UIAlertControllerStyleAlert];
+    
+    [self presentViewController:alertC animated:YES completion:nil];
+}
 
 @end

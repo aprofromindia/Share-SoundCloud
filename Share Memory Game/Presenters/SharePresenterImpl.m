@@ -22,6 +22,8 @@ static const int kViewModelMaxArraySize = 8;
 @implementation SharePresenterImpl{
     id<ShareViewInterface> _view;
     TrackListInteractor *_tracksInteractor;
+    NSInteger _prevIndex = -1;
+    ShareViewModel *_viewModel;
 }
 
 - (instancetype)initWithView:(id<ShareViewInterface>) view{
@@ -61,10 +63,17 @@ static const int kViewModelMaxArraySize = 8;
     }
 }
 
+- (void)didSelectItemAtIndexPath:(NSInteger)index{
+    if (_prevIndex != -1) {
+        
+    }
+}
+
 
 - (void)setResponseModel:(nonnull TrackListResponseModel *)response{
     NSArray *tracksVM = [self p_getViewModelArray:response];
-    [_view setViewModel:[[ShareViewModel alloc] initWithTracks:tracksVM error:response.error]];
+    _viewModel = [[ShareViewModel alloc] initWithTracks:tracksVM error:response.error];
+    [_view setViewModel:_viewModel];
 }
 
 - (nonnull NSArray *) p_getViewModelArray:(TrackListResponseModel *) responseModel{

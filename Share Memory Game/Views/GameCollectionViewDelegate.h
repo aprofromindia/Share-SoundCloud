@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 @import UIKit;
-#import "ShareViewInterface.h"
+@class SharePresenterImpl;
 
 @interface GameCollectionViewDelegate : NSObject <UICollectionViewDelegate>
 
-- (nonnull instancetype)initWithProvider:(nonnull id<DataProvider>) provider NS_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithPresenter:(nonnull SharePresenterImpl *) presenter NS_DESIGNATED_INITIALIZER;
 
 - (nullable instancetype)init NS_UNAVAILABLE;
+
 @end

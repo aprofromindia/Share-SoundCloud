@@ -7,20 +7,25 @@
 //
 
 #import "GameCollectionViewDelegate.h"
+#import "GameCollectionViewCell.h"
+#import "SharePresenterImpl.h"
 
-@implementation GameCollectionViewDelegate
+@implementation GameCollectionViewDelegate{
+    SharePresenterImpl *_presenter;
+}
 
-- (nonnull instancetype)initWithProvider:(nonnull id<DataProvider>)provider
+- (nonnull instancetype)initWithPresenter:(nonnull SharePresenterImpl *)presenter
 {
     self = [super init];
     if (self) {
-        
+        _presenter = presenter;
     }
     return self;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [_presenter didSelectItemAtIndexPath:indexPath.row];
+    [collectionView reloadItemsAtIndexPaths:@[indexPath]];
 }
 
 @end

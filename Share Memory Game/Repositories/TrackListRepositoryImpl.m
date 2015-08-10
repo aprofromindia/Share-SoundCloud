@@ -15,14 +15,6 @@
     id<RESTClient> _restClient;
 }
 
-@property (nonnull, nonatomic, copy) void (^userIDSuccessBlock)(NSString *);
-
-@property (nonnull, nonatomic, copy) void (^userIDErrorBlock)(NSError *);
-
-@property (nonnull, nonatomic, copy) void (^trackListSuccessBlock)(TrackList *);
-
-@property (nonnull, nonatomic, copy) void (^trackListErrorBlock)(NSError *);
-
 @end
 
 @implementation TrackListRepositoryImpl
@@ -38,26 +30,22 @@
 - (void)fetchUserIdWithURL:(nonnull NSString *)trackURL
                    success:(nonnull void (^)(NSString * __nullable))successBlock
                      error:(nonnull void (^)(NSError * __nullable))errorBlock{
-    self.userIDSuccessBlock = successBlock;
-    self.userIDErrorBlock = errorBlock;
     
     [_restClient fetchTrackWithURL:trackURL success:^(Track *track) {
-        _userIDSuccessBlock(track.userId);
+        successBlock(track.userId);
     } failure:^(NSError *error) {
-        _userIDErrorBlock(error);
+        errorBlock(error);
     }];
 }
 
 - (void)fetchTrackListforUser:(nonnull NSString *)userId
                       success:(nonnull void (^)(TrackList * __nullable))successBlock
                         error:(nonnull void (^)(NSError * __nullable))errorBlock{
-    self.trackListSuccessBlock = successBlock;
-    self.trackListErrorBlock = errorBlock;
     
     [_restClient fetchTrackListforUser:userId success:^(TrackList *tracks) {
-        _trackListSuccessBlock(tracks);
+        successBlock(tracks);
     } failure:^(NSError *error) {
-        _trackListErrorBlock(error);
+        errorBlock(error);
     }];
 }
 

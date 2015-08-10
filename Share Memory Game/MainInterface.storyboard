@@ -17,9 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kk1-Qz-ahR">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kk1-Qz-ahR">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Ap-8m-ZAR">
                                     <size key="itemSize" width="95" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -40,9 +40,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="imgView" destination="FrH-Eu-8o0" id="tOm-jc-byJ"/>
+                                            <outlet property="imgView" destination="FrH-Eu-8o0" id="pAF-eX-rdm"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -62,8 +62,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="d5i-Ba-RvD" firstAttribute="top" secondItem="Kk1-Qz-ahR" secondAttribute="bottom" id="5i2-bO-uOI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kk1-Qz-ahR" secondAttribute="trailing" constant="-16" id="Igo-wp-ueb"/>
+                            <constraint firstItem="Kk1-Qz-ahR" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leadingMargin" constant="-16" id="Iqg-iD-Zpx"/>
                             <constraint firstItem="QCz-o7-g6T" firstAttribute="top" secondItem="wbc-yd-nQP" secondAttribute="topMargin" constant="20" id="UTs-Vk-1gb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QCz-o7-g6T" secondAttribute="trailing" constant="-16" id="faj-nr-02K"/>
+                            <constraint firstItem="Kk1-Qz-ahR" firstAttribute="top" secondItem="QCz-o7-g6T" secondAttribute="bottom" id="pdK-0a-AxP"/>
                             <constraint firstItem="QCz-o7-g6T" firstAttribute="leading" secondItem="wbc-yd-nQP" secondAttribute="leadingMargin" constant="-16" id="ug0-90-cM2"/>
                         </constraints>
                     </view>
