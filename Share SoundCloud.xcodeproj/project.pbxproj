@@ -115,6 +115,7 @@
 		A271BE751B7A90500053B2B9 /* ShareMemoryGameDependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareMemoryGameDependencies.h; path = Dependencies/ShareMemoryGameDependencies.h; sourceTree = "<group>"; };
 		A271BE761B7A90500053B2B9 /* ShareMemoryGameDependencies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareMemoryGameDependencies.m; path = Dependencies/ShareMemoryGameDependencies.m; sourceTree = "<group>"; };
 		A271BE791B7AA8410053B2B9 /* RestClientImplSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestClientImplSpec.m; sourceTree = "<group>"; };
+		A271BE7B1B7AB0E70053B2B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A2CD4C621B72119C00320DB8 /* Share SoundCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share SoundCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CD4C661B72119C00320DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2CD4C671B72119C00320DB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -320,6 +321,7 @@
 		A2CD4C591B72119C00320DB8 = {
 			isa = PBXGroup;
 			children = (
+				A271BE7B1B7AB0E70053B2B9 /* README.md */,
 				A2CD4C641B72119C00320DB8 /* Share SoundCloud */,
 				A2CD4C7E1B72119C00320DB8 /* Share SoundCloudTests */,
 				A26A11771B72B5F60089C7C0 /* Share Memory Game */,
