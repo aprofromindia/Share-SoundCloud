@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "RestClient.h"
 
-@interface RESTClientImpl : NSObject <RESTClient>{
-    NSURLSession *_urlSession;
-}
+@interface RESTClientImpl : NSObject <RESTClient>
 
 + (nonnull instancetype) sharedInstance;
 
