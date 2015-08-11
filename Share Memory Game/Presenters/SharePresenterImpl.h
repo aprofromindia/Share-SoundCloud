@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "SharePresenter.h"
 #import "ShareViewInterface.h"
+#import "TrackListRepository.h"
+@class TrackListInteractor;
 
 @interface SharePresenterImpl : NSObject <SharePresenter>
+
+@property(nonnull, nonatomic, strong) TrackListInteractor *tracksInteractor;
 
 - (nonnull instancetype)initWithView:(nonnull id<ShareViewInterface>) view NS_DESIGNATED_INITIALIZER;
 

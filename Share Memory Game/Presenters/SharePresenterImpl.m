@@ -9,7 +9,6 @@
 #import "SharePresenterImpl.h"
 #import "TrackList.h"
 #import "TrackListInteractor.h"
-#import "TrackListRepositoryImpl.h"
 #import "RESTClientImpl.h"
 @import MobileCoreServices;
 #import "ShareViewModel.h"
@@ -22,8 +21,7 @@ static const int kNumOfTracksToDisplay = 9;
 static const NSInteger kUnitialised = -1;
 
 @implementation SharePresenterImpl{
-    id<ShareViewInterface> _view;
-    TrackListInteractor *_tracksInteractor;
+    id<ShareViewInterface> __weak _view;
     NSInteger _prevIndex;
     ShareViewModel *_viewModel;
 }
@@ -32,9 +30,6 @@ static const NSInteger kUnitialised = -1;
     self = [super init];
     if (self) {
         _view = view;
-        RESTClientImpl *restClient = [RESTClientImpl sharedInstance];
-        TrackListRepositoryImpl *tracksRepo = [[TrackListRepositoryImpl alloc] initWithRESTClient:restClient];
-        _tracksInteractor = [[TrackListInteractor alloc] initWithPresenter:self repository:tracksRepo];
         _prevIndex = kUnitialised;
     }
     return self;

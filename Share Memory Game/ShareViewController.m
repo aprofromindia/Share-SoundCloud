@@ -8,17 +8,18 @@
 
 #import "ShareViewController.h"
 #import "SharePresenterImpl.h"
-#import "ShareViewInterface.h"
 #import "GameCollectionViewDataSource.h"
 #import "GameCollectionViewDelegate.h"
 #import "ShareViewModel.h"
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "ShareMemoryGameDependencies.h"
 
-@interface ShareViewController () <ShareViewInterface, DataProvider>{
+@interface ShareViewController () <DataProvider>{
     IBOutlet UICollectionView *__weak _collectionView;
-    SharePresenterImpl *_presenter;
+    ShareMemoryGameDependencies *_dependencyManager;
     GameCollectionViewDataSource *_collectionViewDS;
     GameCollectionViewDelegate *_collectionViewDelegate;
+    ShareViewModel *_viewModel;
 }
 
 @end
@@ -27,7 +28,9 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    _presenter = [[SharePresenterImpl alloc] initWithView:self];
+    _dependencyManager = [ShareMemoryGameDependencies new];
+    [_dependencyManager injectView:self];
+    
     [_presenter setup];
     [self p_setupCollectionView];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];

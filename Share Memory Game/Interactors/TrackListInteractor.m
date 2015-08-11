@@ -12,7 +12,7 @@
 
 @implementation TrackListInteractor{
     TrackList *_trackList;
-    id<SharePresenter> _presenter;
+    id<SharePresenter> __weak _presenter;
     id<TrackListRepository> _repository;
     NSError *_responseError;
 }
