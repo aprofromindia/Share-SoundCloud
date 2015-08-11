@@ -10,7 +10,7 @@
 
 @implementation TrackListResponseModel
 
-- (nonnull instancetype)initWithTrackList:(nullable TrackList *)tracks error:(nullable NSError *)error{
+- (instancetype)initWithTrackList:(TrackList *)tracks error:(NSError *)error{
     self = [super init];
     if (self) {
         _trackList = tracks;

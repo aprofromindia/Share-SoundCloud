@@ -16,7 +16,7 @@
     id<DataProvider> _provider;
 }
 
-- (nonnull instancetype)initWithProvider:(nonnull id<DataProvider>)provider
+- (instancetype)initWithProvider:(id<DataProvider>)provider
 {
     self = [super init];
     if (self) {

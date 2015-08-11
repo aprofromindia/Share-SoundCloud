@@ -14,7 +14,7 @@ static const int kNumberOfCells = 16;
 
 @implementation ShareViewModel
 
-- (nonnull instancetype)initWithTracks:(nullable NSArray *)tracks error:(nullable NSError *)error
+- (instancetype)initWithTracks:(NSArray *)tracks error:(NSError *)error
 {
     self = [super init];
     if (self) {
@@ -24,7 +24,7 @@ static const int kNumberOfCells = 16;
     return self;
 }
 
-- (nonnull NSArray *) p_setupVMWithTracks:(nonnull NSArray *) tracks{
+- (NSArray *) p_setupVMWithTracks:(NSArray *) tracks{
 
     NSMutableArray *tmpArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfCells];
     

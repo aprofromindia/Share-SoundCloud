@@ -10,6 +10,6 @@
 
 @interface NSArray (Helper)
 
-- (NSArray *) shuffled;
+- (nonnull NSArray *) shuffled;
 
 @end

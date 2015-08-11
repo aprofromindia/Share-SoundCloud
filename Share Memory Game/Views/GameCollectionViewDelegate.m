@@ -15,7 +15,7 @@
     NSIndexPath *_prevIndexPath;
 }
 
-- (nonnull instancetype)initWithPresenter:(nonnull SharePresenterImpl *)presenter
+- (instancetype)initWithPresenter:(SharePresenterImpl *)presenter
 {
     self = [super init];
     if (self) {
