@@ -43,12 +43,12 @@ static const NSInteger kUnitialised = -1;
 
 - (void) setup{
     [_tracksInteractor fetchTracksWithURL:kURL]; // TODO: - remove
-//    [self p_extractPermalink];
+//    [self p_extractTrackURL];
 }
 
 
 // Extracts track/playlist URL from extension context.
-- (void)p_extractPermalink{
+- (void)p_extractTrackURL{
     
     for (NSExtensionItem *item in _view.extensionContext.inputItems) {
         

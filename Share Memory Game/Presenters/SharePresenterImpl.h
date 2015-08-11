@@ -16,10 +16,10 @@
 
 - (nullable instancetype)init NS_UNAVAILABLE;
 
-- (void) setup;
+- (void)setup;
 
 - (void)didSelectItemAtIndex:(NSInteger)index;
 
-- (BOOL) shouldSelectItemAtIndex:(NSInteger)index;
+- (BOOL)shouldSelectItemAtIndex:(NSInteger)index;
 
 @end

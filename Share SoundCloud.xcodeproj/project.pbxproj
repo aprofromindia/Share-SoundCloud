@@ -33,7 +33,6 @@
 		A26A11B71B760B400089C7C0 /* TrackListRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11B61B760B400089C7C0 /* TrackListRepositoryImpl.m */; };
 		A26A11BE1B760D1E0089C7C0 /* RESTClientImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11BD1B760D1E0089C7C0 /* RESTClientImpl.m */; };
 		A26A11C31B760D3A0089C7C0 /* TrackListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A11C21B760D3A0089C7C0 /* TrackListInteractor.m */; };
-		A26A11C61B7624AF0089C7C0 /* GamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */; };
 		A271BE661B780A350053B2B9 /* ShareViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE651B780A350053B2B9 /* ShareViewModel.m */; };
 		A271BE6F1B791B050053B2B9 /* NSArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE6E1B791B050053B2B9 /* NSArray+Helper.m */; };
 		A2CD4C681B72119C00320DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C671B72119C00320DB8 /* main.m */; };
@@ -108,7 +107,6 @@
 		A26A11C11B760D3A0089C7C0 /* TrackListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackListInteractor.h; sourceTree = "<group>"; };
 		A26A11C21B760D3A0089C7C0 /* TrackListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackListInteractor.m; sourceTree = "<group>"; };
 		A26A11C41B76236B0089C7C0 /* ShareViewInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewInterface.h; path = Views/ShareViewInterface.h; sourceTree = "<group>"; };
-		A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GamCollectionViewCell.xib; path = Views/GamCollectionViewCell.xib; sourceTree = "<group>"; };
 		A271BE641B780A350053B2B9 /* ShareViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareViewModel.h; path = Presenters/ViewModels/ShareViewModel.h; sourceTree = "<group>"; };
 		A271BE651B780A350053B2B9 /* ShareViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareViewModel.m; path = Presenters/ViewModels/ShareViewModel.m; sourceTree = "<group>"; };
 		A271BE6D1B791B050053B2B9 /* NSArray+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Helper.h"; path = "Utils/NSArray+Helper.h"; sourceTree = "<group>"; };
@@ -384,7 +382,6 @@
 			children = (
 				A26A11881B72C3020089C7C0 /* GameCollectionViewCell.h */,
 				A26A11891B72C3020089C7C0 /* GameCollectionViewCell.m */,
-				A26A11C51B7624AF0089C7C0 /* GamCollectionViewCell.xib */,
 			);
 			name = GameCollectionViewCell;
 			sourceTree = "<group>";
@@ -525,7 +522,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A26A11C61B7624AF0089C7C0 /* GamCollectionViewCell.xib in Resources */,
 				A26A117E1B72B5F60089C7C0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

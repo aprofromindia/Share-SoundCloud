@@ -13,6 +13,5 @@ end
 target 'Share Memory Game' do
 	pod 'JSONModel', '~>1.1.0'
     pod 'SDWebImage', '~>3.7.3'
-    pod 'libextobjc', '~>0.4.1'
     pod 'MBProgressHUD', '~>0.9.1'
 end

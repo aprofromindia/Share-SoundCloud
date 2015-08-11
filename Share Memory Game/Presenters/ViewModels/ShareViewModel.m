@@ -33,7 +33,7 @@ static const int kNumberOfCells = 16;
         Track *track = tracks[i];
         
         [tmpArray addObject:track];
-        [tmpArray addObject:[tracks copy]];
+        [tmpArray addObject:[track copy]];
     }
     return [tmpArray shuffled];
 }
