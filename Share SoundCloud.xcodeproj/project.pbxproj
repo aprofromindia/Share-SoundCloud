@@ -36,13 +36,13 @@
 		A271BE661B780A350053B2B9 /* ShareViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE651B780A350053B2B9 /* ShareViewModel.m */; };
 		A271BE6F1B791B050053B2B9 /* NSArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE6E1B791B050053B2B9 /* NSArray+Helper.m */; };
 		A271BE771B7A90500053B2B9 /* ShareMemoryGameDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE761B7A90500053B2B9 /* ShareMemoryGameDependencies.m */; };
+		A271BE7A1B7AA8410053B2B9 /* RestClientImplSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE791B7AA8410053B2B9 /* RestClientImplSpec.m */; };
 		A2CD4C681B72119C00320DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C671B72119C00320DB8 /* main.m */; };
 		A2CD4C6B1B72119C00320DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6A1B72119C00320DB8 /* AppDelegate.m */; };
 		A2CD4C6E1B72119C00320DB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6D1B72119C00320DB8 /* ViewController.m */; };
 		A2CD4C711B72119C00320DB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CD4C6F1B72119C00320DB8 /* Main.storyboard */; };
 		A2CD4C731B72119C00320DB8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CD4C721B72119C00320DB8 /* Images.xcassets */; };
 		A2CD4C761B72119C00320DB8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2CD4C741B72119C00320DB8 /* LaunchScreen.xib */; };
-		A2CD4C821B72119C00320DB8 /* Share_SoundCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C811B72119C00320DB8 /* Share_SoundCloudTests.m */; };
 		A2FC53011B7758F60060B350 /* GameCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC53001B7758F60060B350 /* GameCollectionViewDataSource.m */; };
 		A2FC53041B7759150060B350 /* GameCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC53031B7759150060B350 /* GameCollectionViewDelegate.m */; };
 		A2FC530E1B7800340060B350 /* TrackListResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC530D1B7800340060B350 /* TrackListResponseModel.m */; };
@@ -114,6 +114,7 @@
 		A271BE6E1B791B050053B2B9 /* NSArray+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Helper.m"; path = "Utils/NSArray+Helper.m"; sourceTree = "<group>"; };
 		A271BE751B7A90500053B2B9 /* ShareMemoryGameDependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareMemoryGameDependencies.h; path = Dependencies/ShareMemoryGameDependencies.h; sourceTree = "<group>"; };
 		A271BE761B7A90500053B2B9 /* ShareMemoryGameDependencies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareMemoryGameDependencies.m; path = Dependencies/ShareMemoryGameDependencies.m; sourceTree = "<group>"; };
+		A271BE791B7AA8410053B2B9 /* RestClientImplSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestClientImplSpec.m; sourceTree = "<group>"; };
 		A2CD4C621B72119C00320DB8 /* Share SoundCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share SoundCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CD4C661B72119C00320DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2CD4C671B72119C00320DB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,7 +127,6 @@
 		A2CD4C751B72119C00320DB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A2CD4C7B1B72119C00320DB8 /* Share SoundCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Share SoundCloudTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CD4C801B72119C00320DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2CD4C811B72119C00320DB8 /* Share_SoundCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Share_SoundCloudTests.m; sourceTree = "<group>"; };
 		A2FC52FE1B76C0260060B350 /* RESTClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RESTClient.h; sourceTree = "<group>"; };
 		A2FC52FF1B7758F60060B350 /* GameCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCollectionViewDataSource.h; path = Views/GameCollectionViewDataSource.h; sourceTree = "<group>"; };
 		A2FC53001B7758F60060B350 /* GameCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCollectionViewDataSource.m; path = Views/GameCollectionViewDataSource.m; sourceTree = "<group>"; };
@@ -365,8 +365,8 @@
 		A2CD4C7E1B72119C00320DB8 /* Share SoundCloudTests */ = {
 			isa = PBXGroup;
 			children = (
-				A2CD4C811B72119C00320DB8 /* Share_SoundCloudTests.m */,
 				A2CD4C7F1B72119C00320DB8 /* Supporting Files */,
+				A271BE791B7AA8410053B2B9 /* RestClientImplSpec.m */,
 			);
 			path = "Share SoundCloudTests";
 			sourceTree = "<group>";
@@ -700,7 +700,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2CD4C821B72119C00320DB8 /* Share_SoundCloudTests.m in Sources */,
+				A271BE7A1B7AA8410053B2B9 /* RestClientImplSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

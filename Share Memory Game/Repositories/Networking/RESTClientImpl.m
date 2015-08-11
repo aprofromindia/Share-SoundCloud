@@ -19,18 +19,11 @@ static NSString *const kJSONMimeType = @"application/json";
 
 static const int kHttpOkStatus = 200;
 
-static RESTClientImpl *sInstance;
-
-@interface RESTClientImpl (){
-    NSURLSession *_urlSession;
-}
-
-@end
-
-
 @implementation RESTClientImpl
 
 + (instancetype)sharedInstance{
+    static RESTClientImpl *sInstance;
+    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sInstance = [[self alloc] init];
