@@ -2,7 +2,6 @@
 # platform :ios, '6.0'
 
 target 'Share SoundCloud' do
-	pod 'AFNetworking'
 end
 
 target 'Share SoundCloudTests' do

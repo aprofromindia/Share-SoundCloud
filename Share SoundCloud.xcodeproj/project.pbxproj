@@ -22,7 +22,6 @@
 
 /* Begin PBXBuildFile section */
 		1DF636E6F0DEE8BE628C8BA1 /* libPods-Share SoundCloudTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC374DE1E011443C98070F05 /* libPods-Share SoundCloudTests.a */; };
-		2256967A773EF4A13F46395C /* libPods-Share SoundCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6544A0472F34553F78686A78 /* libPods-Share SoundCloud.a */; };
 		A26A117C1B72B5F60089C7C0 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A117B1B72B5F60089C7C0 /* ShareViewController.m */; };
 		A26A117E1B72B5F60089C7C0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A26A117D1B72B5F60089C7C0 /* MainInterface.storyboard */; };
 		A26A11811B72B5F60089C7C0 /* Share Memory Game.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A26A11761B72B5F60089C7C0 /* Share Memory Game.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -36,7 +35,6 @@
 		A271BE661B780A350053B2B9 /* ShareViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE651B780A350053B2B9 /* ShareViewModel.m */; };
 		A271BE6F1B791B050053B2B9 /* NSArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE6E1B791B050053B2B9 /* NSArray+Helper.m */; };
 		A271BE771B7A90500053B2B9 /* ShareMemoryGameDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE761B7A90500053B2B9 /* ShareMemoryGameDependencies.m */; };
-		A271BE7A1B7AA8410053B2B9 /* RestClientImplSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE791B7AA8410053B2B9 /* RestClientImplSpec.m */; };
 		A2CD4C681B72119C00320DB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C671B72119C00320DB8 /* main.m */; };
 		A2CD4C6B1B72119C00320DB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6A1B72119C00320DB8 /* AppDelegate.m */; };
 		A2CD4C6E1B72119C00320DB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CD4C6D1B72119C00320DB8 /* ViewController.m */; };
@@ -82,7 +80,6 @@
 
 /* Begin PBXFileReference section */
 		02A0B4EFFC6177978FEA3DA0 /* Pods-Share Memory Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share Memory Game.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share Memory Game/Pods-Share Memory Game.release.xcconfig"; sourceTree = "<group>"; };
-		046DC5BFB52ABD682AB2CCBB /* Pods-Share SoundCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share SoundCloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Share SoundCloud/Pods-Share SoundCloud.debug.xcconfig"; sourceTree = "<group>"; };
 		16EB93758B5CF622FB1367B4 /* Pods-Share SoundCloudTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share SoundCloudTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Share SoundCloudTests/Pods-Share SoundCloudTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6544A0472F34553F78686A78 /* libPods-Share SoundCloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Share SoundCloud.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CEEBF24CBE56C397620C36 /* Pods-Share SoundCloudTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share SoundCloudTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share SoundCloudTests/Pods-Share SoundCloudTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +111,6 @@
 		A271BE6E1B791B050053B2B9 /* NSArray+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Helper.m"; path = "Utils/NSArray+Helper.m"; sourceTree = "<group>"; };
 		A271BE751B7A90500053B2B9 /* ShareMemoryGameDependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareMemoryGameDependencies.h; path = Dependencies/ShareMemoryGameDependencies.h; sourceTree = "<group>"; };
 		A271BE761B7A90500053B2B9 /* ShareMemoryGameDependencies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareMemoryGameDependencies.m; path = Dependencies/ShareMemoryGameDependencies.m; sourceTree = "<group>"; };
-		A271BE791B7AA8410053B2B9 /* RestClientImplSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestClientImplSpec.m; sourceTree = "<group>"; };
 		A271BE7B1B7AB0E70053B2B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A2CD4C621B72119C00320DB8 /* Share SoundCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Share SoundCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CD4C661B72119C00320DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,7 +132,6 @@
 		A2FC530C1B7800340060B350 /* TrackListResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackListResponseModel.h; path = Responses/TrackListResponseModel.h; sourceTree = "<group>"; };
 		A2FC530D1B7800340060B350 /* TrackListResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackListResponseModel.m; path = Responses/TrackListResponseModel.m; sourceTree = "<group>"; };
 		AC374DE1E011443C98070F05 /* libPods-Share SoundCloudTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Share SoundCloudTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB61891B6B25D8387087B5D6 /* Pods-Share SoundCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share SoundCloud.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share SoundCloud/Pods-Share SoundCloud.release.xcconfig"; sourceTree = "<group>"; };
 		E33F2C10B02845C32E569761 /* Pods-Share Memory Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share Memory Game.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Share Memory Game/Pods-Share Memory Game.debug.xcconfig"; sourceTree = "<group>"; };
 		FE280C28F7930746A1D04A64 /* libPods-Share Memory Game.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Share Memory Game.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,7 +149,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2256967A773EF4A13F46395C /* libPods-Share SoundCloud.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +178,6 @@
 			children = (
 				16EB93758B5CF622FB1367B4 /* Pods-Share SoundCloudTests.debug.xcconfig */,
 				72CEEBF24CBE56C397620C36 /* Pods-Share SoundCloudTests.release.xcconfig */,
-				046DC5BFB52ABD682AB2CCBB /* Pods-Share SoundCloud.debug.xcconfig */,
-				CB61891B6B25D8387087B5D6 /* Pods-Share SoundCloud.release.xcconfig */,
 				E33F2C10B02845C32E569761 /* Pods-Share Memory Game.debug.xcconfig */,
 				02A0B4EFFC6177978FEA3DA0 /* Pods-Share Memory Game.release.xcconfig */,
 			);
@@ -368,7 +360,6 @@
 			isa = PBXGroup;
 			children = (
 				A2CD4C7F1B72119C00320DB8 /* Supporting Files */,
-				A271BE791B7AA8410053B2B9 /* RestClientImplSpec.m */,
 			);
 			path = "Share SoundCloudTests";
 			sourceTree = "<group>";
@@ -436,12 +427,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2CD4C851B72119C00320DB8 /* Build configuration list for PBXNativeTarget "Share SoundCloud" */;
 			buildPhases = (
-				2F8FC2D2E36655780DFC125E /* Check Pods Manifest.lock */,
 				A2CD4C5E1B72119C00320DB8 /* Sources */,
 				A2CD4C5F1B72119C00320DB8 /* Frameworks */,
 				A2CD4C601B72119C00320DB8 /* Resources */,
 				A2CD4C9E1B7211B500320DB8 /* Embed App Extensions */,
-				038A7023C641B3228BE837E6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -561,36 +550,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		038A7023C641B3228BE837E6 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Share SoundCloud/Pods-Share SoundCloud-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2F8FC2D2E36655780DFC125E /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		3191392A8C17ED5D80568E99 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -702,7 +661,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A271BE7A1B7AA8410053B2B9 /* RestClientImplSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,7 +813,6 @@
 		};
 		A2CD4C861B72119C00320DB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 046DC5BFB52ABD682AB2CCBB /* Pods-Share SoundCloud.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
@@ -870,7 +827,6 @@
 		};
 		A2CD4C871B72119C00320DB8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB61891B6B25D8387087B5D6 /* Pods-Share SoundCloud.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
