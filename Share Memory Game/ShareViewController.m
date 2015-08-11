@@ -90,6 +90,7 @@
     UIAlertController *alertC = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Network Error", nil)
                                                                     message:NSLocalizedString(@"Please try again!", nil)
                                                              preferredStyle:UIAlertControllerStyleAlert];
+    [alertC addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:nil]];
     
     [self presentViewController:alertC animated:YES completion:nil];
 }

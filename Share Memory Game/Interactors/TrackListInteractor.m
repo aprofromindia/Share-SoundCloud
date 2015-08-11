@@ -39,6 +39,7 @@
         [self p_fetchTracksWithId:userId];
     } error:^(NSError *error) {
         _responseError = error;
+        [self p_setErrorResponse];
     }];
 }
 
@@ -48,8 +49,13 @@
         [_presenter setResponseModel:[[TrackListResponseModel alloc] initWithTrackList:_trackList error:nil]];
     } error:^(NSError *error) {
         _responseError = error;
-        [_presenter setResponseModel:[[TrackListResponseModel alloc] initWithTrackList:nil error:_responseError]];
+        [self p_setErrorResponse];
     }];
 }
+
+- (void)p_setErrorResponse {
+    [_presenter setResponseModel:[[TrackListResponseModel alloc] initWithTrackList:nil error:_responseError]];
+}
+
 
 @end
