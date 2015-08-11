@@ -10,7 +10,7 @@
 @import UIKit;
 @class SharePresenterImpl;
 
-@interface GameCollectionViewDelegate : NSObject <UICollectionViewDelegate>
+@interface GameCollectionViewDelegate : NSObject <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 - (nonnull instancetype)initWithPresenter:(nonnull SharePresenterImpl *) presenter NS_DESIGNATED_INITIALIZER;
 

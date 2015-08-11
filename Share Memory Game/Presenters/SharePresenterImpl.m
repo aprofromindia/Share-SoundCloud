@@ -18,7 +18,7 @@
 
 static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-back-to-back-freestyle"; // TODO - to be removed.
 
-static const int kNumOfTracksToDisplay = 8;
+static const int kNumOfTracksToDisplay = 9;
 static const NSInteger kUnitialised = -1;
 
 @implementation SharePresenterImpl{

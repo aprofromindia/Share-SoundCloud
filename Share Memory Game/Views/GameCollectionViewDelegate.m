@@ -10,6 +10,10 @@
 #import "GameCollectionViewCell.h"
 #import "SharePresenterImpl.h"
 
+static const int kNumberOfCellsPerRow = 3;
+static const int kViewCellHeight = 100;
+static const int kViewCellSpacing = 10;
+
 @implementation GameCollectionViewDelegate{
     SharePresenterImpl *_presenter;
     NSIndexPath *_prevIndexPath;
@@ -30,6 +34,15 @@
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     return [_presenter shouldSelectItemAtIndex:indexPath.row];
+}
+
+#pragma mark - Layout methods 
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+                        sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return CGSizeMake((collectionView.frame.size.width - 2*kViewCellSpacing)/kNumberOfCellsPerRow, kViewCellHeight);
 }
 
 @end
