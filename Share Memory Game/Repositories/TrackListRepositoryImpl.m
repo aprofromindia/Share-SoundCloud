@@ -28,7 +28,7 @@
 }
 
 - (void)fetchUserIdWithURL:(nonnull NSString *)trackURL
-                   success:(nonnull void (^)(NSString * __nullable))successBlock
+                   success:(nonnull void (^)(NSUInteger))successBlock
                      error:(nonnull void (^)(NSError * __nullable))errorBlock{
     
     [_restClient fetchTrackWithURL:trackURL success:^(Track *track) {
@@ -38,7 +38,7 @@
     }];
 }
 
-- (void)fetchTrackListforUser:(nonnull NSString *)userId
+- (void)fetchTrackListforUser:(NSUInteger)userId
                       success:(nonnull void (^)(TrackList * __nullable))successBlock
                         error:(nonnull void (^)(NSError * __nullable))errorBlock{
     

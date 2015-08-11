@@ -12,15 +12,18 @@
 @interface Track : JSONModel
 
 /// Track id
-@property(nonnull, nonatomic, copy) NSString *identity;
+@property(nonatomic, assign) NSUInteger identity;
 
 /// User id
-@property(nonnull, nonatomic, copy) NSString *userId;
+@property(nonatomic, assign) NSUInteger userId;
 
 /// artwork Image URL.
 @property(nonnull, nonatomic, copy) NSString<Optional> *artworkURL;
 
 /// JSONModel Ignored bool property - set when Track is displayed.
 @property (nonatomic, assign, getter=isDisplaying) BOOL displaying;
+
+/// JSONModel Ignored bool property - set when Track is displayed.
+@property (nonatomic, assign, getter=isDiscovered) BOOL discovered;
 
 @end

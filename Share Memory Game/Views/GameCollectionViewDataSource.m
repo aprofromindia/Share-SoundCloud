@@ -12,8 +12,6 @@
 #import "GameCollectionViewCell.h"
 #import "Track.h"
 
-static NSString *const kCellIdentifier = @"GameCollectionViewCell";
-
 @implementation GameCollectionViewDataSource{
     id<DataProvider> _provider;
 }
@@ -28,7 +26,8 @@ static NSString *const kCellIdentifier = @"GameCollectionViewCell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+
+    static NSString *const kCellIdentifier = @"GameCollectionViewCell";
     GameCollectionViewCell *viewCell = (GameCollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
     
     Track *track = _provider.viewModel.tracks[indexPath.row];
@@ -37,7 +36,7 @@ static NSString *const kCellIdentifier = @"GameCollectionViewCell";
     
     [viewCell.imgView sd_setImageWithURL:[NSURL URLWithString:artworkURL]];
     
-    if (track.isDisplaying) {
+    if (track.isDiscovered || track.isDisplaying) {
         viewCell.imgView.hidden = NO;
     }else{
         viewCell.imgView.hidden = YES;

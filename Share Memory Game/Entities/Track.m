@@ -19,7 +19,8 @@
 }
 
 + (BOOL)propertyIsIgnored:(NSString *)propertyName{
-    if ([propertyName isEqualToString:@"displaying"]) {
+    if ([propertyName isEqualToString:@"displaying"]
+                            || [propertyName isEqualToString:@"discovered"]) {
         return YES;
     }
     return NO;

@@ -35,15 +35,15 @@
 #pragma mark - private methods
 
 - (void)p_fetchUserIdWithURL:(NSString *) trackURL{
-    [_repository fetchUserIdWithURL:(NSString *) trackURL success:^(NSString *userId) {
+    [_repository fetchUserIdWithURL:(NSString *) trackURL success:^(NSUInteger userId) {
         [self p_fetchTracksWithId:userId];
     } error:^(NSError *error) {
         _responseError = error;
     }];
 }
 
-- (void)p_fetchTracksWithId:(NSString *) userId{
-    [_repository fetchTrackListforUser:(NSString *) userId success:^(TrackList * tracks) {
+- (void)p_fetchTracksWithId:(NSUInteger) userId{
+    [_repository fetchTrackListforUser:(NSUInteger) userId success:^(TrackList * tracks) {
         _trackList = tracks;
         [_presenter setResponseModel:[[TrackListResponseModel alloc] initWithTrackList:_trackList error:nil]];
     } error:^(NSError *error) {

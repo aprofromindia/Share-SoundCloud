@@ -29,8 +29,11 @@ static const int kNumberOfCells = 16;
     NSMutableArray *tmpArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfCells];
     
     for (int i = 0; i < tracks.count; i++) {
-        [tmpArray addObject:tracks[i]];
-        [tmpArray addObject:tracks[i]];
+        
+        Track *track = tracks[i];
+        
+        [tmpArray addObject:track];
+        [tmpArray addObject:[tracks copy]];
     }
     return [tmpArray shuffled];
 }

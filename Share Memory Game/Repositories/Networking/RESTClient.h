@@ -15,7 +15,7 @@
                    success:(nonnull void (^)(Track *__nullable)) successBlock
                      failure:(nonnull void(^)(NSError *__nullable)) failureBlock;
 
-- (void) fetchTrackListforUser:(nonnull NSString *) userId
+- (void) fetchTrackListforUser:(NSUInteger) userId
                        success:(nonnull void (^)(TrackList *__nullable)) successBlock
                          failure:(nonnull void(^)(NSError *__nullable)) failureBlock;
 

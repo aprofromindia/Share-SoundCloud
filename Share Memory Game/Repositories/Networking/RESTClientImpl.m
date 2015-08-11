@@ -15,6 +15,7 @@ static NSString *const kBaseURL = @"https://api.soundcloud.com";
 static NSString *const kURLKey = @"url";
 static NSString *const kClientIdKey = @"client_id";
 static NSString *const kClientIdValue = @"57fe511433de3267094fb2fb8fd77f0c";
+static NSString *const kJSONMimeType = @"application/json";
 
 static const int kHttpOkStatus = 200;
 
@@ -61,12 +62,12 @@ static RESTClientImpl *sInstance;
 }
 
 
-- (void)fetchTrackListforUser:(NSString *)userId
+- (void)fetchTrackListforUser:(NSUInteger)userId
                       success:(void (^)(TrackList * ))successBlock
                         failure:(void (^)(NSError *))failureBlock{
-    static NSString *const kUserTracksPath = @"/users/%@/tracks";
+    static NSString *const kUserTracksPath = @"/users/%lu/tracks";
     
-    [self p_requestWithURL:[kBaseURL stringByAppendingFormat:kUserTracksPath, userId] params:@{kClientIdKey : kClientIdValue}
+    [self p_requestWithURL:[kBaseURL stringByAppendingFormat:kUserTracksPath, (unsigned long)userId] params:@{kClientIdKey : kClientIdValue}
                    success:^(NSData *data) {
                        
                        NSError *jsonError;
@@ -96,7 +97,7 @@ static RESTClientImpl *sInstance;
         
         NSHTTPURLResponse *httpResp = (NSHTTPURLResponse *) response;
         
-        if (!error && httpResp.statusCode == kHttpOkStatus) {
+        if (!error && httpResp.statusCode == kHttpOkStatus && [response.MIMEType isEqualToString:kJSONMimeType]) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 successBlock(data);
             });

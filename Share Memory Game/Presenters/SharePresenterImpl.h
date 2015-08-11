@@ -18,6 +18,8 @@
 
 - (void) setup;
 
-- (void)didSelectItemAtIndexPath:(NSInteger)index;
+- (void)didSelectItemAtIndex:(NSInteger)index;
+
+- (BOOL) shouldSelectItemAtIndex:(NSInteger)index;
 
 @end

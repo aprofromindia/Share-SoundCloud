@@ -12,6 +12,7 @@
 
 @implementation GameCollectionViewDelegate{
     SharePresenterImpl *_presenter;
+    NSIndexPath *_prevIndexPath;
 }
 
 - (nonnull instancetype)initWithPresenter:(nonnull SharePresenterImpl *)presenter
@@ -23,9 +24,12 @@
     return self;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-    [_presenter didSelectItemAtIndexPath:indexPath.row];
-    [collectionView reloadItemsAtIndexPaths:@[indexPath]];
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [_presenter didSelectItemAtIndex:indexPath.row];
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    return [_presenter shouldSelectItemAtIndex:indexPath.row];
 }
 
 @end

@@ -14,15 +14,17 @@
 @import MobileCoreServices;
 #import "ShareViewModel.h"
 #import "TrackListResponseModel.h"
+#import "Track.h"
 
 static NSString *const kURL = @"https://soundcloud.com/octobersveryown/drake-back-to-back-freestyle"; // TODO - to be removed.
 
-static const int kViewModelMaxArraySize = 8;
+static const int kNumOfTracksToDisplay = 8;
+static const NSInteger kUnitialised = -1;
 
 @implementation SharePresenterImpl{
     id<ShareViewInterface> _view;
     TrackListInteractor *_tracksInteractor;
-    NSInteger _prevIndex = -1;
+    NSInteger _prevIndex;
     ShareViewModel *_viewModel;
 }
 
@@ -33,6 +35,7 @@ static const int kViewModelMaxArraySize = 8;
         RESTClientImpl *restClient = [RESTClientImpl sharedInstance];
         TrackListRepositoryImpl *tracksRepo = [[TrackListRepositoryImpl alloc] initWithRESTClient:restClient];
         _tracksInteractor = [[TrackListInteractor alloc] initWithPresenter:self repository:tracksRepo];
+        _prevIndex = kUnitialised;
     }
     return self;
 }
@@ -63,24 +66,51 @@ static const int kViewModelMaxArraySize = 8;
     }
 }
 
-- (void)didSelectItemAtIndexPath:(NSInteger)index{
-    if (_prevIndex != -1) {
+- (void)didSelectItemAtIndex:(NSInteger)index{
+    if (_prevIndex != kUnitialised) {
+        Track *prevTrack = _viewModel.tracks[_prevIndex];
+        Track *currTrack = _viewModel.tracks[index];
         
+        if (currTrack.identity == prevTrack.identity && prevTrack.isDisplaying) {
+            currTrack.discovered = YES;
+            prevTrack.discovered = YES;
+            _prevIndex = kUnitialised;
+        }else{
+            prevTrack.displaying = NO;
+            currTrack.displaying = YES;
+            _prevIndex = index;
+        }
+        
+    }else{
+        Track *track = _viewModel.tracks[index];
+        track.displaying = YES;
+        _prevIndex = index;
+    }
+    [_view setViewModel:_viewModel];
+}
+
+- (BOOL)shouldSelectItemAtIndex:(NSInteger)index{
+    Track *track = _viewModel.tracks[index];
+    
+    if (track.isDiscovered) {
+        return NO;
+    }else{
+        return YES;
     }
 }
 
 
 - (void)setResponseModel:(nonnull TrackListResponseModel *)response{
-    NSArray *tracksVM = [self p_getViewModelArray:response];
-    _viewModel = [[ShareViewModel alloc] initWithTracks:tracksVM error:response.error];
+    NSArray *eightTracks = [self p_arrayOfFirstEightElems:response];
+    _viewModel = [[ShareViewModel alloc] initWithTracks:eightTracks error:response.error];
     [_view setViewModel:_viewModel];
 }
 
-- (nonnull NSArray *) p_getViewModelArray:(TrackListResponseModel *) responseModel{
+- (nonnull NSArray *) p_arrayOfFirstEightElems:(TrackListResponseModel *) responseModel{
     NSArray *tracks = responseModel.trackList.tracks;
     
-    if (tracks.count > kViewModelMaxArraySize) {
-        return [tracks subarrayWithRange:NSMakeRange(0, kViewModelMaxArraySize)];
+    if (tracks.count > kNumOfTracksToDisplay) {
+        return [tracks subarrayWithRange:NSMakeRange(0, kNumOfTracksToDisplay)];
     }else{
         return responseModel.trackList.tracks;
     }
