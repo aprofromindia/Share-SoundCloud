@@ -16,7 +16,6 @@
 
 @interface ShareViewController () <DataProvider>{
     IBOutlet UICollectionView *__weak _collectionView;
-    ShareMemoryGameDependencies *_dependencyManager;
     GameCollectionViewDataSource *_collectionViewDS;
     GameCollectionViewDelegate *_collectionViewDelegate;
     ShareViewModel *_viewModel;
@@ -28,8 +27,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    _dependencyManager = [ShareMemoryGameDependencies new];
-    [_dependencyManager injectView:self];
+    [[ShareMemoryGameDependencies new] injectView:self];
     
     [_presenter setup];
     [self p_setupCollectionView];
